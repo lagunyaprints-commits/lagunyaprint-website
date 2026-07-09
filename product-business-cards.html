@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Cards | Custom Printing | LagunyaPrint</title>
+<meta name="description" content="Premium custom business cards. Multiple materials, both sides printing. Order from 100 pcs. Same-day delivery available.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e63329;--red-dark:#c42a22;--red-light:#fff1f0;--orange:#ff6b35;--dark:#111;--surface:#f9f9f9;--card:#fff;--text:#2d2d2d;--text-light:#6b6b6b;--border:#e8e8e8;--radius:16px;--pill:999px;--shadow-mega:0 24px 60px rgba(0,0,0,.18);--ease:all .3s cubic-bezier(.4,0,.2,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;color:var(--text);background:var(--card);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:block}ul{list-style:none}
+
+.ab{background:linear-gradient(135deg,var(--red),var(--orange));color:#fff;text-align:center;padding:10px 40px 10px 20px;font-size:13px;font-weight:500;position:relative}
+.ab.h{display:none}
+.ab .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border:none;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer}
+
+.hdr{background:var(--card);position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--border)}
+.hdr.sc{box-shadow:0 4px 30px rgba(0,0,0,.08)}
+.ht{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.logo{font-family:Outfit;font-weight:800;font-size:22px;color:var(--red);letter-spacing:-.5px}
+.hl{display:flex;gap:18px;align-items:center}
+.hl a{font-size:13px;color:var(--text-light);font-weight:500}
+.hl .b{background:var(--red);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+
+/* MEGA MENU */
+.mm-nav{background:var(--card);border-top:1px solid var(--border);position:relative}
+.mm-list{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;position:relative}
+.mm-list::-webkit-scrollbar{display:none}
+.mm-item{position:relative;flex-shrink:0}
+.mm-link{display:flex;align-items:center;gap:6px;padding:14px 18px;font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;cursor:pointer;transition:var(--ease);border-bottom:3px solid transparent;user-select:none}
+.mm-item:hover > .mm-link,.mm-item.open > .mm-link,.mm-link.active{color:var(--red);border-bottom-color:var(--red);background:var(--red-light)}
+.mm-link .arrow{font-size:10px;transition:transform .3s ease;opacity:.6}
+.mm-item:hover > .mm-link .arrow,.mm-item.open > .mm-link .arrow{transform:rotate(180deg)}
+.mm-dropdown{position:absolute;top:100%;left:0;background:var(--card);border-radius:0 0 16px 16px;box-shadow:var(--shadow-mega);padding:30px 32px;width:1100px;max-width:calc(100vw - 48px);z-index:999;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s ease,transform .25s ease,visibility .25s;border-top:3px solid var(--red);pointer-events:none}
+.mm-item:hover > .mm-dropdown,.mm-item.open > .mm-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mm-item::after{content:'';position:absolute;top:100%;left:0;right:0;height:0;background:transparent;pointer-events:none}
+.mm-item:hover::after{height:15px;pointer-events:auto}
+.mm-item:nth-last-child(-n+4) .mm-dropdown{left:auto;right:0}
+.mm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.mm-col h3{font-family:Outfit;font-size:13px;font-weight:700;color:var(--red);margin-bottom:16px;text-transform:uppercase;letter-spacing:.8px;padding-bottom:8px;border-bottom:2px solid var(--red-light)}
+.mm-col ul{padding:0;margin:0}
+.mm-col li{margin-bottom:8px}
+.mm-col a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;color:var(--text);padding:6px 8px;border-radius:6px;transition:var(--ease);font-weight:500}
+.mm-col a:hover{background:var(--red-light);color:var(--red);padding-left:12px}
+.mm-tag{font-size:9px;padding:2px 8px;border-radius:var(--pill);font-weight:700;letter-spacing:.5px;text-transform:uppercase;flex-shrink:0;color:#fff}
+.mm-tag.new{background:#10b981}.mm-tag.best{background:var(--red)}.mm-tag.pop{background:var(--orange)}.mm-tag.fast{background:#f59e0b}.mm-tag.rec{background:#3b82f6}.mm-tag.prem{background:#8b5cf6}
+.mm-footer-bar{margin-top:24px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.mm-view-all{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--red);padding:8px 16px;border-radius:var(--pill);border:2px solid var(--red);transition:var(--ease)}
+.mm-view-all:hover{background:var(--red);color:#fff}
+.mm-mobile-toggle{display:none;background:none;border:none;font-size:24px;color:var(--dark);cursor:pointer;padding:8px 12px}
+.mm-item-close{display:none}
+@media(max-width:1024px){
+  .mm-mobile-toggle{display:block}
+  .mm-list{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--card);flex-direction:column;padding:80px 0 40px;z-index:999;overflow-y:auto;transform:translateX(-100%);transition:transform .3s ease}
+  .mm-list.show{transform:translateX(0)}
+  .mm-item-close{display:block;position:fixed;top:20px;right:20px;background:var(--red);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;z-index:1001}
+  .mm-item{width:100%;border-bottom:1px solid var(--border)}
+  .mm-link{padding:16px 24px;justify-content:space-between;width:100%}
+  .mm-item:hover > .mm-dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto;max-height:0}
+  .mm-item.open > .mm-dropdown{max-height:2000px}
+  .mm-dropdown{position:static;transform:none;box-shadow:none;width:100%;max-width:100%;padding:0;border-radius:0;border:none;background:var(--surface);max-height:0;overflow:hidden;opacity:1;visibility:visible;transition:max-height .3s ease;pointer-events:auto}
+  .mm-grid{grid-template-columns:1fr;gap:0;padding:0 24px}
+  .mm-col{padding:16px 0;border-bottom:1px solid var(--border)}
+  .mm-footer-bar{padding:16px 24px;flex-direction:column;gap:12px}
+  body.mm-open{overflow:hidden}
+  .mm-item:hover::after{display:none}
+}
+
+.bc{max-width:1280px;margin:0 auto;padding:20px 24px 0;font-size:13px;color:var(--text-light)}
+.bc a:hover{color:var(--red)}.bc b{color:var(--text)}
+
+/* PRODUCT DETAIL LAYOUT */
+.product{max-width:1280px;margin:0 auto;padding:30px 24px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+
+/* LEFT: Image gallery */
+.gallery .main-img{width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative}
+.gallery .main-img img{width:100%;height:100%;object-fit:cover}
+.gallery .thumbs{display:flex;gap:12px;margin-top:14px}
+.gallery .thumb{width:80px;height:80px;border-radius:10px;overflow:hidden;border:2px solid var(--border);cursor:pointer;transition:var(--ease)}
+.gallery .thumb.active,.gallery .thumb:hover{border-color:var(--red)}
+.gallery .thumb img{width:100%;height:100%;object-fit:cover}
+.trust-badges{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap}
+.tb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-light);background:var(--surface);padding:8px 14px;border-radius:var(--pill)}
+.tb .ic{font-size:16px}
+
+/* RIGHT: Product info */
+.pinfo .cat{font-size:12px;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.pinfo h1{font-family:Outfit;font-size:34px;font-weight:800;line-height:1.1;margin-bottom:12px}
+.pinfo .rating{display:flex;align-items:center;gap:8px;margin-bottom:16px;font-size:13px;color:var(--text-light)}
+.pinfo .rating .stars{color:#f59e0b}
+.pinfo .desc{font-size:15px;color:var(--text-light);margin-bottom:24px}
+
+.price-box{background:var(--surface);border-radius:var(--radius);padding:20px;margin-bottom:24px}
+.price-box .label{font-size:12px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.price-box .price{font-family:Outfit;font-size:36px;font-weight:800;color:var(--red)}
+.price-box .price small{font-size:15px;color:var(--text-light);font-weight:500}
+.price-box .old-price{font-size:16px;color:var(--text-light);text-decoration:line-through;margin-left:10px}
+.price-box .save{display:inline-block;background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--pill);margin-left:10px}
+
+/* OPTIONS */
+.opt-group{margin-bottom:22px}
+.opt-group .opt-label{font-size:14px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.opt-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.opt-btn{padding:10px 18px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;transition:var(--ease);background:#fff}
+.opt-btn:hover{border-color:var(--red)}
+.opt-btn.active{border-color:var(--red);background:var(--red-light);color:var(--red)}
+
+/* QUANTITY */
+.qty-group{margin-bottom:24px}
+.qty-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.qty-btn{padding:14px 22px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:var(--ease);text-align:center;background:#fff;min-width:100px}
+.qty-btn:hover{border-color:var(--red)}
+.qty-btn.active{border-color:var(--red);background:var(--red-light)}
+.qty-btn .q{font-size:16px;font-weight:800;display:block}
+.qty-btn .p{font-size:12px;color:var(--text-light)}
+.qty-btn.active .p{color:var(--red)}
+
+/* TOTAL + BUTTONS */
+.total-box{background:var(--dark);color:#fff;border-radius:var(--radius);padding:20px 24px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+.total-box .t-label{font-size:13px;opacity:.7}
+.total-box .t-price{font-family:Outfit;font-size:32px;font-weight:800}
+
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#25D366;color:#fff;padding:18px;border-radius:var(--pill);font-size:17px;font-weight:700;cursor:pointer;transition:var(--ease);border:none;margin-bottom:12px}
+.wa-btn:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.4)}
+.wa-btn .wa-ic{font-size:24px}
+
+.call-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#fff;color:var(--red);padding:16px;border-radius:var(--pill);font-size:15px;font-weight:700;cursor:pointer;transition:var(--ease);border:2px solid var(--red)}
+.call-btn:hover{background:var(--red);color:#fff}
+
+/* FEATURES LIST */
+.features-list{max-width:1280px;margin:0 auto;padding:40px 24px}
+.features-list h2{font-family:Outfit;font-size:24px;font-weight:700;margin-bottom:20px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat-card{background:var(--surface);border-radius:var(--radius);padding:24px;text-align:center}
+.feat-card .ic{font-size:36px;margin-bottom:10px}
+.feat-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.feat-card p{font-size:13px;color:var(--text-light)}
+
+/* SPECS TABLE */
+.specs{max-width:1280px;margin:0 auto;padding:20px 24px 50px}
+.specs h2{font-family:Outfit;font-size:24px;font-weight:700;margin-bottom:20px}
+.specs table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+.specs td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:14px}
+.specs td:first-child{font-weight:700;width:40%;background:var(--surface)}
+.specs tr:last-child td{border-bottom:none}
+
+.divider{height:4px;background:linear-gradient(90deg,var(--orange),var(--red),var(--orange));opacity:.2}
+
+/* FOOTER */
+.ft{background:var(--dark);color:#fff;padding:50px 24px 25px}
+.ft-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+.ft h3{font-size:12px;font-weight:700;margin-bottom:14px;opacity:.5;text-transform:uppercase;letter-spacing:1px}
+.ft a{display:block;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px}
+.ft a:hover{color:#fff}
+.ft-brand .logo{color:#fff}
+.ft-brand p{color:rgba(255,255,255,.4);font-size:12px;margin-top:8px}
+.ft-bot{max-width:1280px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:11px;color:rgba(255,255,255,.3)}
+
+/* FLOATING WHATSAPP */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:2000;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 30px rgba(37,211,102,.5);cursor:pointer;transition:var(--ease);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,.5)}50%{box-shadow:0 8px 40px rgba(37,211,102,.7)}}
+.wa-float:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .product{grid-template-columns:1fr;gap:30px}
+  .pinfo h1{font-size:26px}
+  .feat-grid{grid-template-columns:1fr}
+  .ft-in{grid-template-columns:1fr 1fr}
+  .hl .hm{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ab">⚡ Same Day Delivery Available — Order before 4:30 PM<button class="x" onclick="this.parentElement.classList.add('h')">✕</button></div>
+
+<header class="hdr" id="hdr">
+  <div class="ht">
+    <a href="index.html" class="logo">LagunyaPrint</a>
+    <div class="hl">
+      <a href="#" class="hm">Track Order</a>
+      <a href="#" class="hm">Store Locator</a>
+      <a href="#" class="b">Login</a>
+      <button class="mm-mobile-toggle" id="mobToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <nav class="mm-nav"><ul class="mm-list" id="mmList"></ul></nav>
+</header>
+
+<div class="bc"><a href="index.html">Home</a> &rsaquo; <a href="05-stationery.html">Stationery</a> &rsaquo; <b>Business Cards</b></div>
+
+<!-- PRODUCT DETAIL -->
+<section class="product">
+  <!-- LEFT: Gallery -->
+  <div class="gallery">
+    <div class="main-img">
+      <img id="mainImg" src="images/stationery/img_1.jpg" alt="Business Cards">
+    </div>
+    <div class="thumbs">
+      <div class="thumb active" onclick="changeImg(this,'images/stationery/img_1.jpg')"><img src="images/stationery/img_1.jpg" alt="View 1"></div>
+      <div class="thumb" onclick="changeImg(this,'images/home/img_12.jpg')"><img src="images/home/img_12.jpg" alt="View 2"></div>
+      <div class="thumb" onclick="changeImg(this,'images/stationery/img_3.jpg')"><img src="images/stationery/img_3.jpg" alt="View 3"></div>
+    </div>
+    <div class="trust-badges">
+      <div class="tb"><span class="ic">🚚</span> Same Day Delivery</div>
+      <div class="tb"><span class="ic">✅</span> Premium Quality</div>
+      <div class="tb"><span class="ic">🎨</span> Free Design Help</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Product Info -->
+  <div class="pinfo">
+    <div class="cat">Business Stationery</div>
+    <h1>Custom Business Cards</h1>
+    <div class="rating">
+      <span class="stars">★★★★★</span>
+      <span>4.8 (2,340 reviews)</span>
+    </div>
+    <p class="desc">Make a lasting first impression with premium custom business cards. Choose from multiple materials and finishes. Print on both sides. High-quality, durable, and professional.</p>
+
+    <div class="price-box">
+      <div class="label">Starting Price</div>
+      <div class="price">₹<span id="unitPrice">299</span> <small>onwards</small><span class="old-price">₹499</span><span class="save">40% OFF</span></div>
+    </div>
+
+    <!-- Material Options -->
+    <div class="opt-group">
+      <div class="opt-label">📄 Select Material</div>
+      <div class="opt-buttons" id="materialBtns">
+        <div class="opt-btn active" onclick="selectOpt(this,'material','Standard 300 GSM')">Standard 300 GSM</div>
+        <div class="opt-btn" onclick="selectOpt(this,'material','Premium Matte')">Premium Matte</div>
+        <div class="opt-btn" onclick="selectOpt(this,'material','Glossy Laminated')">Glossy Laminated</div>
+        <div class="opt-btn" onclick="selectOpt(this,'material','Non-Tearable')">Non-Tearable</div>
+      </div>
+    </div>
+
+    <!-- Printing Side -->
+    <div class="opt-group">
+      <div class="opt-label">🖨️ Printing Side</div>
+      <div class="opt-buttons" id="sideBtns">
+        <div class="opt-btn active" onclick="selectOpt(this,'side','Single Side')">Single Side</div>
+        <div class="opt-btn" onclick="selectOpt(this,'side','Both Sides')">Both Sides</div>
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="qty-group">
+      <div class="opt-label">📦 Select Quantity</div>
+      <div class="qty-buttons" id="qtyBtns">
+        <div class="qty-btn active" onclick="selectQty(this,100,299)"><span class="q">100</span><span class="p">₹299</span></div>
+        <div class="qty-btn" onclick="selectQty(this,250,599)"><span class="q">250</span><span class="p">₹599</span></div>
+        <div class="qty-btn" onclick="selectQty(this,500,999)"><span class="q">500</span><span class="p">₹999</span></div>
+        <div class="qty-btn" onclick="selectQty(this,1000,1799)"><span class="q">1000</span><span class="p">₹1799</span></div>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="total-box">
+      <div>
+        <div class="t-label">Total (<span id="totalQty">100</span> cards)</div>
+      </div>
+      <div class="t-price">₹<span id="totalPrice">299</span></div>
+    </div>
+
+    <!-- WhatsApp Order Button -->
+    <button class="wa-btn" onclick="orderWhatsApp()">
+      <span class="wa-ic">📱</span> Customize & Order on WhatsApp
+    </button>
+    <a class="call-btn" href="tel:+919560597115">
+      📞 Call to Order: 9560597115
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features-list">
+  <h2>Why Choose Our Business Cards?</h2>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="ic">💎</div><h3>Premium Quality</h3><p>High-grade materials with sharp, vibrant printing that lasts.</p></div>
+    <div class="feat-card"><div class="ic">🎨</div><h3>Free Design Support</h3><p>Our team helps you design the perfect card at no extra cost.</p></div>
+    <div class="feat-card"><div class="ic">⚡</div><h3>Same Day Delivery</h3><p>Order before 4:30 PM and get delivery the same day in select cities.</p></div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs">
+  <h2>Product Specifications</h2>
+  <table>
+    <tr><td>Material Options</td><td>300 GSM, Premium Matte, Glossy Laminated, Non-Tearable</td></tr>
+    <tr><td>Size</td><td>Standard 3.5" x 2" (89mm x 51mm)</td></tr>
+    <tr><td>Printing</td><td>Single side or Both sides, Full colour</td></tr>
+    <tr><td>Minimum Order</td><td>100 cards</td></tr>
+    <tr><td>Finish Options</td><td>Matte, Glossy, Lamination, Foil</td></tr>
+    <tr><td>Delivery</td><td>Same day (select cities) or 2-4 business days</td></tr>
+  </table>
+</section>
+
+<footer class="ft"><div class="ft-in">
+  <div class="ft-brand"><div class="logo">LagunyaPrint</div><p>India's Fastest Custom Printing</p></div>
+  <div><h3>Quick Links</h3><a href="01-all-products.html">All Products</a><a href="02-same-day-delivery.html">Same Day Delivery</a><a href="05-stationery.html">Stationery</a></div>
+  <div><h3>Categories</h3><a href="03-apparel.html">Apparel</a><a href="04-photo-gifts.html">Photo Gifts</a><a href="06-packaging.html">Packaging</a></div>
+  <div><h3>Contact</h3><a href="tel:+919560597115">📞 9560597115</a><a href="https://wa.me/919560597115">📱 WhatsApp</a></div>
+</div><div class="ft-bot">© 2025 LagunyaPrint. All rights reserved.</div></footer>
+
+<!-- Floating WhatsApp -->
+<div class="wa-float" onclick="orderWhatsApp()" title="Order on WhatsApp">📱</div>
+
+<script>
+// ═══ PRODUCT STATE ═══
+let selectedMaterial = 'Standard 300 GSM';
+let selectedSide = 'Single Side';
+let selectedQty = 100;
+let selectedPrice = 299;
+
+function selectOpt(btn, type, value) {
+  // Remove active from siblings
+  btn.parentElement.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (type === 'material') selectedMaterial = value;
+  if (type === 'side') selectedSide = value;
+}
+
+function selectQty(btn, qty, price) {
+  document.querySelectorAll('#qtyBtns .qty-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedQty = qty;
+  selectedPrice = price;
+  document.getElementById('totalQty').textContent = qty;
+  document.getElementById('totalPrice').textContent = price;
+}
+
+function changeImg(thumb, src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+// ═══ WHATSAPP ORDER ═══
+function orderWhatsApp() {
+  const phone = '919560597115';
+  const message = `Hi LagunyaPrint! 👋
+
+I want to order *Business Cards*:
+
+📄 Material: ${selectedMaterial}
+🖨️ Printing: ${selectedSide}
+📦 Quantity: ${selectedQty} cards
+💰 Price: ₹${selectedPrice}
+
+Please help me customize and confirm my order.`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+// ═══ MEGA MENU (same as other pages) ═══
+const MENU = {
+  "All Products":{href:"01-all-products.html",columns:[{title:"Best Sellers",items:[{name:"Business Cards",href:"product-business-cards.html",tag:"best"},{name:"T-shirts",href:"03-apparel.html"},{name:"Photo Prints",href:"04-photo-gifts.html"},{name:"Photo Frames",href:"04-photo-gifts.html"},{name:"Drinkware",href:"09-drinkware.html"},{name:"Stickers",href:"06-packaging.html"}]},{title:"Browse Categories",items:[{name:"Business Stationery",href:"05-stationery.html"},{name:"Photo Gifts",href:"04-photo-gifts.html"},{name:"Apparel",href:"03-apparel.html"},{name:"Packaging",href:"06-packaging.html"},{name:"Signage",href:"07-signage.html"},{name:"Corporate Gifts",href:"08-corporate-gifts.html"},{name:"Drinkware",href:"09-drinkware.html"}]},{title:"Shop By Needs",items:[{name:"Cafe & Restaurant",href:"10-hotels-restaurants.html"},{name:"Employee Gifting",href:"08-corporate-gifts.html"}]},{title:"Stores & Services",items:[{name:"Same Day Delivery",href:"02-same-day-delivery.html",tag:"fast"},{name:"New Launches",href:"#",tag:"new"}]}]},
+  "Same Day Delivery":{href:"02-same-day-delivery.html",columns:[{title:"Shop By Category",items:[{name:"Photo Gifts",href:"04-photo-gifts.html"},{name:"T-shirts & Hoodies",href:"03-apparel.html"},{name:"Business Stationery",href:"05-stationery.html"},{name:"Packaging",href:"06-packaging.html"},{name:"Signages & Marketing",href:"07-signage.html"}]},{title:"Best Sellers",items:[{name:"Photo Prints",href:"04-photo-gifts.html",tag:"best"},{name:"Business Cards",href:"product-business-cards.html"},{name:"Round Neck T-Shirts",href:"03-apparel.html"},{name:"Photo Frames",href:"04-photo-gifts.html"}]},{title:"Photo Gifts",items:[{name:"Classic Photo Frames",href:"04-photo-gifts.html"},{name:"Personalized Mugs",href:"09-drinkware.html"},{name:"Photo Magic Mug",href:"09-drinkware.html"}]},{title:"Drinkware",items:[{name:"Freo Sipper",href:"09-drinkware.html"},{name:"Cola Can",href:"09-drinkware.html"}]}]},
+  "Apparel":{href:"03-apparel.html",columns:[{title:"T-shirts",items:[{name:"Custom Round Neck",href:"03-apparel.html"},{name:"Ultra Premium Round Neck",href:"03-apparel.html",tag:"new"},{name:"Dry-Fit T-shirts",href:"03-apparel.html"},{name:"Custom Polo T-shirts",href:"03-apparel.html"},{name:"Popcorn Knit Polo",href:"03-apparel.html",tag:"new"}]},{title:"Hoodies & Jackets",items:[{name:"Hoodies & Sweatshirts",href:"03-apparel.html"},{name:"Ultra Premium Hoodies",href:"03-apparel.html"},{name:"High Neck Jackets",href:"03-apparel.html"}]},{title:"Branded T-shirts",items:[{name:"Finch Round Neck",href:"03-apparel.html",tag:"new"},{name:"Levis Round Neck",href:"03-apparel.html",tag:"new"},{name:"Jack & Jones Polo",href:"03-apparel.html",tag:"new"}]},{title:"Caps & Bags",items:[{name:"Custom Caps",href:"03-apparel.html"},{name:"Backpacks",href:"08-corporate-gifts.html"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"}]}]},
+  "Photo Gifts":{href:"04-photo-gifts.html",columns:[{title:"Most Popular",items:[{name:"Photo Frames",href:"04-photo-gifts.html",tag:"pop"},{name:"Acrylic Prints",href:"04-photo-gifts.html",tag:"prem"},{name:"Mugs",href:"09-drinkware.html"},{name:"Photo Albums",href:"04-photo-gifts.html"}]},{title:"Prints & Decor",items:[{name:"Photo Prints",href:"04-photo-gifts.html"},{name:"Posters",href:"07-signage.html"},{name:"Fridge Magnets",href:"04-photo-gifts.html"},{name:"LED Photo Frames",href:"04-photo-gifts.html"}]},{title:"Photo Frames",items:[{name:"Collage Frames",href:"04-photo-gifts.html",tag:"new"},{name:"Classic Frames",href:"04-photo-gifts.html"},{name:"Canvas Frames",href:"04-photo-gifts.html"}]},{title:"Accessories",items:[{name:"Keychains",href:"04-photo-gifts.html"},{name:"Pop Socket",href:"04-photo-gifts.html"},{name:"Playing Cards",href:"04-photo-gifts.html"}]}]},
+  "Stationery":{href:"05-stationery.html",columns:[{title:"Business Cards",items:[{name:"Standard Business Cards",href:"product-business-cards.html",tag:"rec"},{name:"Laminated Cards",href:"product-business-cards.html"},{name:"Raised Foil Cards",href:"product-business-cards.html",tag:"prem"}]},{title:"Notebooks",items:[{name:"Tattva Notebooks",href:"05-stationery.html",tag:"new"},{name:"Wiro Notebook",href:"05-stationery.html"},{name:"Hard Cover Notebook",href:"05-stationery.html"}]},{title:"Office Supplies",items:[{name:"Letterheads",href:"05-stationery.html"},{name:"Envelopes",href:"05-stationery.html"},{name:"Rubber Stamps",href:"05-stationery.html"},{name:"Bill Books",href:"05-stationery.html"}]},{title:"Cards & Invites",items:[{name:"Wedding Invites",href:"05-stationery.html"},{name:"Thankyou Cards",href:"05-stationery.html"},{name:"ID Cards",href:"05-stationery.html"}]}]},
+  "Packaging":{href:"06-packaging.html",columns:[{title:"Stickers",items:[{name:"Custom Shape Stickers",href:"06-packaging.html",tag:"rec"},{name:"Gold Foil Stickers",href:"06-packaging.html"},{name:"Circle Stickers",href:"06-packaging.html"}]},{title:"Labels",items:[{name:"Packaging Labels",href:"06-packaging.html",tag:"pop"},{name:"Transparent Labels",href:"06-packaging.html"},{name:"Kraft Labels",href:"06-packaging.html"}]},{title:"Boxes & Bags",items:[{name:"Mailer Boxes",href:"06-packaging.html",tag:"rec"},{name:"Food Boxes",href:"06-packaging.html"},{name:"Paper Bags",href:"06-packaging.html"}]},{title:"Hospitality",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"},{name:"Coasters",href:"10-hotels-restaurants.html"}]}]},
+  "Signage":{href:"07-signage.html",columns:[{title:"Outdoor",items:[{name:"Banners",href:"07-signage.html"},{name:"Standees",href:"07-signage.html"},{name:"Vehicle Graphics",href:"07-signage.html"}]},{title:"Indoor",items:[{name:"Name Plates",href:"07-signage.html"},{name:"Acrylic Desk Stand",href:"07-signage.html",tag:"pop"},{name:"Wall Decals",href:"07-signage.html"},{name:"QR Code Stand",href:"07-signage.html",tag:"new"}]},{title:"Event",items:[{name:"Event Standees",href:"07-signage.html"},{name:"Danglers",href:"07-signage.html"},{name:"Flyers",href:"07-signage.html"}]},{title:"Custom",items:[{name:"LED Frames",href:"04-photo-gifts.html"},{name:"Canvas",href:"04-photo-gifts.html"}]}]},
+  "Corporate Gifts":{href:"08-corporate-gifts.html",columns:[{title:"Joining Kits",items:[{name:"The Chapter One",href:"08-corporate-gifts.html",tag:"new"},{name:"Premium Welcome Kit",href:"08-corporate-gifts.html"},{name:"Tech Welcome Kit",href:"08-corporate-gifts.html"}]},{title:"Festive Hampers",items:[{name:"Diwali Hamper",href:"08-corporate-gifts.html"},{name:"New Year Hamper",href:"08-corporate-gifts.html"}]},{title:"Awards",items:[{name:"Crystal Trophies",href:"08-corporate-gifts.html",tag:"pop"},{name:"Certificates",href:"08-corporate-gifts.html"},{name:"Medals",href:"08-corporate-gifts.html"}]},{title:"Drinkware",items:[{name:"Premium Bottles",href:"09-drinkware.html",tag:"new"},{name:"Mugs",href:"09-drinkware.html"}]}]},
+  "Drinkware":{href:"09-drinkware.html",columns:[{title:"New Launches",items:[{name:"Frosty Sipper",href:"09-drinkware.html",tag:"new"},{name:"Radiate Tumbler",href:"09-drinkware.html",tag:"new"}]},{title:"Best Sellers",items:[{name:"Freo Insulated Bottle",href:"09-drinkware.html",tag:"best"},{name:"Elite Sipper Black",href:"09-drinkware.html"},{name:"Cola Can",href:"09-drinkware.html"}]},{title:"Premium Mugs",items:[{name:"Jumbo Mug White",href:"09-drinkware.html"},{name:"Photo Magic Mug",href:"09-drinkware.html"},{name:"Beer Mug",href:"09-drinkware.html"}]},{title:"Bottles",items:[{name:"PureGrip Bottle",href:"09-drinkware.html"},{name:"Mason Jar",href:"09-drinkware.html"}]}]},
+  "Hotels & Restaurants":{href:"10-hotels-restaurants.html",columns:[{title:"Cafe Essentials",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html",tag:"pop"},{name:"Coasters",href:"10-hotels-restaurants.html"},{name:"QR Stand",href:"10-hotels-restaurants.html",tag:"new"}]},{title:"Takeaway",items:[{name:"Food Boxes",href:"10-hotels-restaurants.html"},{name:"Paper Bags",href:"10-hotels-restaurants.html"},{name:"Packaging Labels",href:"10-hotels-restaurants.html",tag:"best"}]},{title:"Decor & Staff",items:[{name:"Posters",href:"10-hotels-restaurants.html"},{name:"Polo T-shirts",href:"10-hotels-restaurants.html"},{name:"Caps",href:"10-hotels-restaurants.html"}]},{title:"Branding",items:[{name:"Flyers",href:"10-hotels-restaurants.html"},{name:"Stickers",href:"10-hotels-restaurants.html"}]}]}
+};
+
+function getTagLabel(tag){const l={'new':'NEW','best':'Best Seller','pop':'Popular','fast':'Fast','rec':'Recommended','prem':'Premium'};return l[tag]||tag.toUpperCase()}
+function buildMenuItem(name,data){const cols=data.columns.map(col=>`<div class="mm-col"><h3>${col.title}</h3><ul>${col.items.map(item=>`<li><a href="${item.href}"><span>${item.name}</span>${item.tag?`<span class="mm-tag ${item.tag}">${getTagLabel(item.tag)}</span>`:''}</a></li>`).join('')}</ul></div>`).join('');return `<li class="mm-item"><a class="mm-link" href="${data.href}">${name}<span class="arrow">▼</span></a><div class="mm-dropdown"><div class="mm-grid">${cols}</div><div class="mm-footer-bar"><span style="font-size:13px;color:#6b6b6b">Explore all ${name}</span><a href="${data.href}" class="mm-view-all">View All →</a></div></div></li>`}
+function renderMenu(){const list=document.getElementById('mmList');const items=Object.entries(MENU).map(([name,data])=>buildMenuItem(name,data)).join('');list.innerHTML=`<button class="mm-item-close" id="mobClose">✕</button>${items}`;attachMM()}
+function attachMM(){const items=document.querySelectorAll('.mm-item');const isMob=()=>window.innerWidth<=1024;items.forEach(item=>{const link=item.querySelector('.mm-link');if(!link)return;link.addEventListener('click',(e)=>{if(isMob()){e.preventDefault();const wasOpen=item.classList.contains('open');items.forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}})});const mobToggle=document.getElementById('mobToggle');const mmList=document.getElementById('mmList');const mobClose=document.getElementById('mobClose');if(mobToggle)mobToggle.addEventListener('click',()=>{mmList.classList.add('show');document.body.classList.add('mm-open')});if(mobClose)mobClose.addEventListener('click',()=>{mmList.classList.remove('show');document.body.classList.remove('mm-open');items.forEach(i=>i.classList.remove('open'))});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){mmList?.classList.remove('show');document.body.classList.remove('mm-open')}});document.querySelectorAll('.mm-col a, .mm-view-all').forEach(link=>{link.addEventListener('click',()=>{if(isMob()){mmList.classList.remove('show');document.body.classList.remove('mm-open')}})})}
+renderMenu();
+
+window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('sc',scrollY>10)});
+</script>
+</body>
+</html>

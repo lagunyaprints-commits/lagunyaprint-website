@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Gifts | Premium Branded Gifts | LagunyaPrint</title>
+<meta name="description" content="Premium corporate gifts and branded merchandise. Welcome kits, joining kits, festive gifts and more.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e63329;--gold:#d4a574;--dark:#111;--surface:#faf8f5;--card:#fff;--text:#2d2d2d;--text-light:#6b6b6b;--border:#e8e8e8;--radius:16px;--pill:999px;--shadow-hover:0 20px 48px rgba(0,0,0,.12);--ease:all .35s cubic-bezier(.4,0,.2,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;color:var(--text);background:var(--card);line-height:1.6;overflow-x:hidden}a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:block}
+.ab{background:linear-gradient(135deg,var(--red),#ff5246);color:#fff;text-align:center;padding:10px 40px 10px 20px;font-size:13px;font-weight:500;position:relative}.ab.h{display:none}.ab .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border:none;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer}
+.hdr{background:var(--card);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}.hdr.sc{box-shadow:0 4px 30px rgba(0,0,0,.08)}.ht{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}.logo{font-family:Outfit;font-weight:800;font-size:28px;color:var(--red)}.hl{display:flex;gap:18px;align-items:center}.hl a{font-size:13px;color:var(--text-light);font-weight:500}.hl .b{background:var(--red);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+.nv{max-width:1280px;margin:0 auto;display:flex;gap:6px;padding:0 24px 14px;overflow-x:auto;scrollbar-width:none}.nv::-webkit-scrollbar{display:none}.np{padding:7px 16px;border-radius:var(--pill);font-size:13px;font-weight:500;white-space:nowrap;border:1.5px solid var(--border);color:var(--text-light);transition:var(--ease);cursor:pointer}.np:hover{border-color:var(--red);color:var(--red)}.np.on{background:var(--red);color:#fff;border-color:var(--red)}
+.bc{max-width:1280px;margin:0 auto;padding:20px 24px 0;font-size:13px;color:var(--text-light)}.bc b{color:var(--text)}
+.hero{max-width:1280px;margin:0 auto;padding:30px 24px 0}.hc{background:linear-gradient(135deg,#1f1611 0%,#3d2817 50%,var(--gold) 100%);border-radius:24px;padding:60px 50px;position:relative;overflow:hidden}.hc h1{font-family:Outfit;font-size:48px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:14px}.hc p{color:rgba(255,255,255,.85);font-size:16px;max-width:500px;margin-bottom:24px}.hc .btn{display:inline-flex;background:#fff;color:var(--dark);padding:14px 28px;border-radius:var(--pill);font-weight:700;transition:var(--ease)}.hc .btn:hover{background:var(--gold);color:var(--dark)}
+.sec{max-width:1280px;margin:0 auto;padding:50px 24px}.sec-h{display:flex;align-items:center;gap:14px;margin-bottom:28px}.si{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}.si.a{background:#FFF8E1}.si.b{background:#E8F5E9}.si.c{background:#FCE4EC}.si.d{background:#E3F2FD}.st{font-family:Outfit;font-size:26px;font-weight:700}.sc2{font-size:13px;color:var(--text-light)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);transition:var(--ease);cursor:pointer;position:relative}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);border-color:transparent}
+.card .iw{aspect-ratio:1;overflow:hidden;background:var(--surface);position:relative}
+.card .iw img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.4,0,.2,1);display:block}
+.card:hover .iw img{transform:scale(1.06)}
+.card .iw .fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;z-index:1;pointer-events:none}
+.card .iw .fallback .icon{font-size:48px;margin-bottom:8px}
+.card .iw .fallback .name{font-size:14px;font-weight:700;color:var(--red)}
+.card .iw img.loaded ~ .fallback{display:none}
+.card .cb{padding:14px 16px}.card .cb h3{font-size:14px;font-weight:700;margin-bottom:3px}.card .cb p{font-size:11px;color:var(--text-light)}
+.card .ov{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:40px 16px 16px;transform:translateY(100%);transition:var(--ease);z-index:2}.card:hover .ov{transform:translateY(0)}.card .ov span{color:#fff;font-size:13px;font-weight:600}
+.badge{position:absolute;top:10px;left:10px;background:var(--gold);color:var(--dark);padding:4px 10px;border-radius:var(--pill);font-size:10px;font-weight:700;z-index:3}
+.divider{height:4px;background:linear-gradient(90deg,var(--gold),var(--red),var(--gold));opacity:.25}
+.trust{background:var(--surface);padding:36px 24px}.ti{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.tit{text-align:center}.tit .ic{font-size:28px;margin-bottom:4px}.tit h4{font-size:13px;font-weight:700}.tit p{font-size:11px;color:var(--text-light)}
+.faq-g{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fi{border:1.5px solid var(--border);border-radius:10px;overflow:hidden}.fi.on{border-color:var(--gold)}.fq{padding:16px 18px;font-weight:600;font-size:13px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}.fq:hover{background:var(--surface)}.fq .ar{transition:transform .3s}.fi.on .ar{transform:rotate(180deg)}.fa{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 18px;font-size:12px;color:var(--text-light);line-height:1.7}.fi.on .fa{max-height:200px;padding:0 18px 16px}
+.ft{background:var(--dark);color:#fff;padding:50px 24px 25px}.ft-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}.ft h3{font-size:12px;font-weight:700;margin-bottom:14px;opacity:.5;text-transform:uppercase;letter-spacing:1px}.ft a{display:block;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px}.ft-brand .logo{color:#fff}.ft-brand p{color:rgba(255,255,255,.4);font-size:12px;margin-top:8px}.ft-bot{max-width:1280px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:11px;color:rgba(255,255,255,.3)}
+.float{position:fixed;bottom:24px;right:24px;z-index:200;background:var(--gold);color:var(--dark);padding:12px 22px;border-radius:var(--pill);font-weight:700;font-size:13px;box-shadow:0 8px 30px rgba(212,165,116,.4);cursor:pointer;transition:var(--ease)}.float:hover{transform:translateY(-3px)}
+.btt{position:fixed;bottom:24px;left:24px;z-index:200;width:42px;height:42px;border-radius:50%;background:var(--dark);color:#fff;border:none;cursor:pointer;font-size:16px;display:none;align-items:center;justify-content:center}.btt.show{display:flex}.btt:hover{background:var(--red)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .5s,transform .5s}.reveal.vis{opacity:1;transform:translateY(0)}
+@media(max-width:900px){.hc h1{font-size:32px}.hc{padding:36px 24px}.grid{grid-template-columns:repeat(2,1fr)}.faq-g{grid-template-columns:1fr}.ft-in{grid-template-columns:1fr 1fr}.ti{grid-template-columns:1fr 1fr}.hl .hm{display:none}}
+@media(max-width:600px){.hc h1{font-size:26px}.grid{grid-template-columns:1fr 1fr;gap:10px}.card .cb{padding:10px 12px}.card .cb h3{font-size:12px}.ft-in{grid-template-columns:1fr}}
+/* MEGA MENU INJECTED */
+.mm-nav{background:var(--card,#fff);border-top:1px solid var(--border,#e8e8e8);position:relative}
+.mm-list{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;position:relative;list-style:none}
+.mm-list::-webkit-scrollbar{display:none}
+.mm-item{position:relative;flex-shrink:0;list-style:none}
+.mm-link{display:flex;align-items:center;gap:6px;padding:14px 18px;font-size:14px;font-weight:600;color:var(--text,#2d2d2d);white-space:nowrap;cursor:pointer;transition:all .3s;border-bottom:3px solid transparent;user-select:none;text-decoration:none}
+.mm-item:hover > .mm-link,.mm-item.open > .mm-link,.mm-link.active{color:var(--red,#e63329);border-bottom-color:var(--red,#e63329);background:#fff1f0}
+.mm-link .arrow{font-size:10px;transition:transform .3s ease;opacity:.6}
+.mm-item:hover > .mm-link .arrow,.mm-item.open > .mm-link .arrow{transform:rotate(180deg)}
+.mm-dropdown{position:absolute;top:100%;left:0;background:var(--card,#fff);border-radius:0 0 16px 16px;box-shadow:0 24px 60px rgba(0,0,0,.18);padding:30px 32px;width:1100px;max-width:calc(100vw - 48px);z-index:999;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s ease,transform .25s ease,visibility .25s;border-top:3px solid var(--red,#e63329);pointer-events:none}
+.mm-item:hover > .mm-dropdown,.mm-item.open > .mm-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mm-item::after{content:'';position:absolute;top:100%;left:0;right:0;height:0;background:transparent;pointer-events:none}
+.mm-item:hover::after{height:15px;pointer-events:auto}
+.mm-item:nth-last-child(-n+4) .mm-dropdown{left:auto;right:0}
+.mm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.mm-col h3{font-family:Outfit;font-size:13px;font-weight:700;color:var(--red,#e63329);margin-bottom:16px;text-transform:uppercase;letter-spacing:.8px;padding-bottom:8px;border-bottom:2px solid #fff1f0}
+.mm-col ul{list-style:none;padding:0;margin:0}
+.mm-col li{margin-bottom:8px;list-style:none}
+.mm-col a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;color:var(--text,#2d2d2d);padding:6px 8px;border-radius:6px;transition:all .3s;font-weight:500;text-decoration:none}
+.mm-col a:hover{background:#fff1f0;color:var(--red,#e63329);padding-left:12px}
+.mm-tag{font-size:9px;padding:2px 8px;border-radius:999px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;flex-shrink:0;color:#fff}
+.mm-tag.new{background:#10b981}.mm-tag.best{background:#e63329}.mm-tag.pop{background:#ff6b35}.mm-tag.fast{background:#f59e0b}.mm-tag.rec{background:#3b82f6}.mm-tag.prem{background:#8b5cf6}
+.mm-footer-bar{margin-top:24px;padding-top:20px;border-top:1px solid var(--border,#e8e8e8);display:flex;justify-content:space-between;align-items:center}
+.mm-view-all{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--red,#e63329);padding:8px 16px;border-radius:999px;border:2px solid var(--red,#e63329);transition:all .3s;text-decoration:none}
+.mm-view-all:hover{background:var(--red,#e63329);color:#fff}
+.mm-mobile-toggle{display:none;background:none;border:none;font-size:24px;color:#111;cursor:pointer;padding:8px 12px}
+.mm-item-close{display:none}
+@media(max-width:1024px){
+  .mm-mobile-toggle{display:block}
+  .mm-list{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--card,#fff);flex-direction:column;padding:80px 0 40px;z-index:999;overflow-y:auto;transform:translateX(-100%);transition:transform .3s ease}
+  .mm-list.show{transform:translateX(0)}
+  .mm-item-close{display:block;position:fixed;top:20px;right:20px;background:var(--red,#e63329);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;z-index:1001}
+  .mm-item{width:100%;border-bottom:1px solid var(--border,#e8e8e8)}
+  .mm-link{padding:16px 24px;justify-content:space-between;width:100%}
+  .mm-item:hover > .mm-dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto;max-height:0}
+  .mm-item.open > .mm-dropdown{max-height:2000px}
+  .mm-dropdown{position:static;transform:none;box-shadow:none;width:100%;max-width:100%;padding:0;border-radius:0;border:none;background:#f9f9f9;max-height:0;overflow:hidden;opacity:1;visibility:visible;transition:max-height .3s ease;pointer-events:auto}
+  .mm-grid{grid-template-columns:1fr;gap:0;padding:0 24px}
+  .mm-col{padding:16px 0;border-bottom:1px solid var(--border,#e8e8e8)}
+  .mm-col:last-child{border-bottom:none}
+  .mm-col h3{margin-bottom:8px}
+  .mm-footer-bar{padding:16px 24px;flex-direction:column;gap:12px}
+  body.mm-open{overflow:hidden}
+  .mm-item:hover::after{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ab">⚡ Premium Corporate Gifts — Bulk Discounts Available<button class="x" onclick="this.parentElement.classList.add('h')">✕</button></div>
+<header class="hdr" id="hdr"><div class="ht"><a href="index.html" class="logo">LagunyaPrint</a><div class="hl"><a class="hm">Track Order</a><a class="hm">Store Locator</a><a class="b">Login</a><button class="mm-mobile-toggle" id="mobToggle" aria-label="Open menu">☰</button></div></div>
+<nav class="mm-nav"><ul class="mm-list" id="mmList"></ul></nav></header>
+<div class="bc"><a href="index.html">Home</a> &rsaquo; <b>Corporate Gifts</b></div>
+<section class="hero"><div class="hc"><h1>Premium Corporate<br>Gifts ✨</h1><p>Make every milestone memorable — welcome kits, festive hampers, branded merchandise for employees, clients, and partners.</p><a href="#kits" class="btn">Explore Gifts ↓</a></div></section>
+
+<div id="content"></div>
+
+<div class="divider"></div>
+<div class="trust"><div class="ti"><div class="tit"><div class="ic">⭐</div><h4>Google Review</h4><p>4.5 Stars</p></div><div class="tit"><div class="ic">🚚</div><h4>Nationwide</h4><p>India & Intl</p></div><div class="tit"><div class="ic">✅</div><h4>Guaranteed</h4><p>Free replacement</p></div><div class="tit"><div class="ic">💬</div><h4>Support</h4><p>Talk to us!</p></div></div></div>
+
+<section class="sec">
+<div class="sec-h reveal"><div class="si d">❓</div><div><div class="st">Frequently Asked Questions</div></div></div>
+<div class="faq-g">
+<div class="fi on"><div class="fq" onclick="tfaq(this)">What gifts do you offer?<span class="ar">▾</span></div><div class="fa">Welcome kits, joining kits, festive hampers, branded merchandise, premium awards, and customised gift sets.</div></div>
+<div class="fi"><div class="fq" onclick="tfaq(this)">Minimum order quantity?<span class="ar">▾</span></div><div class="fa">Most kits start from 10 units. Premium items can be ordered from 1 unit.</div></div>
+<div class="fi"><div class="fq" onclick="tfaq(this)">Bulk pricing?<span class="ar">▾</span></div><div class="fa">Yes! Significant discounts on bulk orders. Contact our sales team.</div></div>
+<div class="fi"><div class="fq" onclick="tfaq(this)">Custom kit assembly?<span class="ar">▾</span></div><div class="fa">Yes, we offer custom kit assembly with your selection of products and branding.</div></div>
+<div class="fi"><div class="fq" onclick="tfaq(this)">Branded packaging?<span class="ar">▾</span></div><div class="fa">All gifts can be packaged in custom branded boxes, bags, or hampers.</div></div>
+<div class="fi"><div class="fq" onclick="tfaq(this)">Direct delivery?<span class="ar">▾</span></div><div class="fa">Yes, ship to multiple addresses with personalised notes for each recipient.</div></div>
+</div></section>
+
+<footer class="ft"><div class="ft-in">
+<div class="ft-brand"><div class="logo">LagunyaPrint</div><p>India's Fastest Custom Printing</p></div>
+<div><h3>Quick Links</h3>
+<a href="01-all-products.html">All Products</a>
+<a href="02-same-day-delivery.html">Same Day Delivery</a>
+<a href="10-hotels-restaurants.html">Hotels & Restaurants</a>
+<a href="#">Track Order</a></div>
+<div><h3>Categories</h3>
+<a href="03-apparel.html">Apparel</a>
+<a href="04-photo-gifts.html">Photo Gifts</a>
+<a href="05-stationery.html">Stationery</a>
+<a href="06-packaging.html">Packaging</a>
+<a href="07-signage.html">Signage</a>
+<a href="08-corporate-gifts.html">Corporate Gifts</a>
+<a href="09-drinkware.html">Drinkware</a></div>
+<div><h3>Connect</h3><a>Facebook</a><a>Instagram</a><a>YouTube</a><a>WhatsApp</a></div>
+</div><div class="ft-bot">© 2025 LagunyaPrint. All rights reserved.</div></footer>
+<a class="float" href="#kits">🎁 Get Quote</a>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function makeCard(p){
+  return `<div class="card reveal"><div class="iw" style="background:linear-gradient(135deg,${p.c}15 0%,${p.c}25 100%);">${p.best?'<div class="badge">✨ Premium</div>':''}<img src="images/corporate-gifts/img_${p.img}.jpg" alt="${p.n}" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'"><div class="fallback"><div class="icon">${p.ic}</div><div class="name" style="color:${p.c}">${p.n}</div></div><div class="ov"><span>Customize →</span></div></div><div class="cb"><h3>${p.n}</h3><p>${p.d||''}</p></div></div>`;
+}
+
+const secs=[
+{id:'kits',title:'Joining & Welcome Kits',icon:'🎁',cls:'a',prods:[
+{n:'Premium Welcome Kit',img:1,c:'#d4a574',ic:'🎁',d:'Notebook, pen, mug & tote',best:1},
+{n:'Executive Joining Kit',img:2,c:'#1565C0',ic:'💼',d:'Premium leather diary set'},
+{n:'Tech Welcome Kit',img:3,c:'#37474F',ic:'💻',d:'Laptop sleeve, mousepad, USB',best:1},
+{n:'Eco Welcome Kit',img:4,c:'#2E7D32',ic:'♻️',d:'Sustainable products bundle'},
+{n:'Wellness Kit',img:5,c:'#E91E63',ic:'🌿',d:'Wellness products & merch'},
+{n:'Standard Joining Kit',img:6,c:'#6A1B9A',ic:'🎁',d:'Notebook, pen & lanyard'}
+]},
+{id:'festive',title:'Festive Gift Hampers',icon:'🎊',cls:'b',prods:[
+{n:'Diwali Premium Hamper',img:7,c:'#e63329',ic:'🪔',d:'Sweets, dry fruits & gifts',best:1},
+{n:'New Year Hamper',img:8,c:'#FF6F00',ic:'🎊',d:'Calendar, planner & treats'},
+{n:'Holi Color Box',img:9,c:'#E91E63',ic:'🎨',d:'Organic colors & sweets'},
+{n:'Christmas Hamper',img:10,c:'#C62828',ic:'🎄',d:'Festive treats & gifts',best:1},
+{n:'Eid Gift Box',img:11,c:'#2E7D32',ic:'🌙',d:'Premium dates & sweets'},
+{n:'Custom Festive Box',img:12,c:'#d4a574',ic:'🎁',d:'Build your own hamper'}
+]},
+{id:'merch',title:'Branded Merchandise',icon:'👔',cls:'c',prods:[
+{n:'Branded T-shirts',img:13,c:'#e63329',ic:'👕',d:'Custom employee tees',best:1},
+{n:'Premium Polo Shirts',img:14,c:'#1565C0',ic:'👔',d:'Logo embroidered polos'},
+{n:'Branded Hoodies',img:15,c:'#37474F',ic:'🧥',d:'Premium custom hoodies'},
+{n:'Custom Caps',img:16,c:'#2E7D32',ic:'🧢',d:'Embroidered branded caps'},
+{n:'Branded Backpacks',img:17,c:'#795548',ic:'🎒',d:'Logo printed backpacks'},
+{n:'Custom Tote Bags',img:18,c:'#6A1B9A',ic:'🛍️',d:'Eco-friendly branded totes'},
+{n:'Branded Mugs',img:19,c:'#FF6F00',ic:'☕',d:'Logo printed mugs'},
+{n:'Custom Bottles',img:20,c:'#00695C',ic:'🍶',d:'Branded water bottles'}
+]},
+{id:'awards',title:'Awards & Recognition',icon:'🏆',cls:'a',prods:[
+{n:'Crystal Trophies',img:21,c:'#1565C0',ic:'🏆',d:'Premium crystal awards',best:1},
+{n:'Wooden Plaques',img:22,c:'#795548',ic:'🏆',d:'Engraved wooden plaques'},
+{n:'Metal Trophies',img:23,c:'#F9A825',ic:'🏆',d:'Gold-toned metal awards'},
+{n:'Acrylic Awards',img:24,c:'#6A1B9A',ic:'🏆',d:'Modern acrylic designs'},
+{n:'Memento Sets',img:25,c:'#d4a574',ic:'🎖️',d:'Premium memento boxes'},
+{n:'Service Awards',img:26,c:'#2E7D32',ic:'🥇',d:'Years of service awards'}
+]},
+{id:'premium',title:'Premium Gifts',icon:'💎',cls:'b',prods:[
+{n:'Leather Diary Set',img:27,c:'#795548',ic:'📔',d:'Premium leather + pen',best:1},
+{n:'Designer Pen Set',img:28,c:'#1565C0',ic:'🖊️',d:'Luxury pen collection'},
+{n:'Power Bank',img:29,c:'#37474F',ic:'🔋',d:'Branded portable charger'},
+{n:'Bluetooth Speaker',img:30,c:'#e63329',ic:'🔊',d:'Premium wireless speaker',best:1},
+{n:'Premium Wallet',img:31,c:'#5d4037',ic:'👛',d:'Genuine leather wallet'},
+{n:'Watch Set',img:32,c:'#d4a574',ic:'⌚',d:'Branded wristwatch'},
+{n:'Photo Frame Set',img:33,c:'#E91E63',ic:'🖼️',d:'Premium frame collection'},
+{n:'Travel Kit',img:34,c:'#00695C',ic:'🧳',d:'Travel essentials bundle'}
+]}];
+
+document.getElementById('content').innerHTML=secs.map(s=>`<section class="sec" id="${s.id}"><div class="sec-h reveal"><div class="si ${s.cls}">${s.icon}</div><div><div class="st">${s.title}</div><div class="sc2">${s.prods.length} products</div></div></div><div class="grid">${s.prods.map(makeCard).join('')}</div></section><div class="divider"></div>`).join('');
+
+window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('sc',scrollY>10);document.getElementById('btt').classList.toggle('show',scrollY>400)});
+function tfaq(e){e.parentElement.classList.toggle('on')}
+const obs=new IntersectionObserver(e=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('vis'),i*40);obs.unobserve(en.target)}})},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+
+<script>
+const MENU = {
+"All Products":{href:"01-all-products.html",columns:[{title:"Best Sellers",items:[{name:"Business Cards",href:"01-all-products.html",tag:"best"},{name:"T-shirts",href:"03-apparel.html#tshirts"},{name:"Photo Prints",href:"04-photo-gifts.html"},{name:"Photo Frames",href:"04-photo-gifts.html#frames"},{name:"Booklets",href:"05-stationery.html#biz"},{name:"Sweatshirts & Hoodies",href:"03-apparel.html#hoodies"},{name:"Posters",href:"07-signage.html#marketing"},{name:"Drinkware",href:"09-drinkware.html"},{name:"Tote Bags",href:"06-packaging.html"},{name:"Packaging Labels",href:"06-packaging.html#products"},{name:"Stickers",href:"06-packaging.html"}]},{title:"Browse Categories",items:[{name:"Business Stationery",href:"05-stationery.html"},{name:"Photo Gifts",href:"04-photo-gifts.html"},{name:"Apparel",href:"03-apparel.html"},{name:"Packaging",href:"06-packaging.html"},{name:"Signage",href:"07-signage.html"},{name:"Corporate Gifts",href:"08-corporate-gifts.html"},{name:"Rewards & Recognition",href:"08-corporate-gifts.html#awards"},{name:"Drinkware",href:"09-drinkware.html"},{name:"Calendars & Diaries",href:"05-stationery.html"}]},{title:"Shop By Needs",items:[{name:"Startup Branding",href:"01-all-products.html#needs"},{name:"Events & Promotions",href:"01-all-products.html#needs"},{name:"Cafe & Restaurant",href:"10-hotels-restaurants.html"},{name:"Employee Gifting",href:"08-corporate-gifts.html"}]},{title:"Stores & Services",items:[{name:"Same Day Delivery",href:"02-same-day-delivery.html",tag:"fast"},{name:"Bulk Buying",href:"08-corporate-gifts.html"},{name:"Store Locator",href:"#"},{name:"New Launches",href:"#",tag:"new"},{name:"Blog",href:"#"}]}]},
+"Same Day Delivery":{href:"02-same-day-delivery.html",columns:[{title:"Shop By Category",items:[{name:"Photo Gifts",href:"02-same-day-delivery.html#photo-gifts"},{name:"T-shirts & Hoodies",href:"02-same-day-delivery.html#tshirts"},{name:"Business Stationery",href:"02-same-day-delivery.html#stationery"},{name:"Packaging",href:"02-same-day-delivery.html#packaging"},{name:"Signages & Marketing",href:"02-same-day-delivery.html#signage"},{name:"Rewards",href:"02-same-day-delivery.html#rewards"},{name:"Calendars & Diaries",href:"02-same-day-delivery.html#calendars"}]},{title:"Best Sellers",items:[{name:"Photo Prints",href:"04-photo-gifts.html",tag:"best"},{name:"Business Cards",href:"02-same-day-delivery.html#stationery"},{name:"Round Neck T-Shirts",href:"02-same-day-delivery.html#tshirts"},{name:"Desk Calendars",href:"02-same-day-delivery.html#calendars"},{name:"Photo Frames",href:"04-photo-gifts.html"},{name:"Posters",href:"07-signage.html"},{name:"Notebooks",href:"05-stationery.html"}]},{title:"Photo Gifts",items:[{name:"Collage Foldable Frames",href:"02-same-day-delivery.html#photo-gifts",tag:"new"},{name:"Classic Photo Frames",href:"04-photo-gifts.html"},{name:"Photo with Wooden Stand",href:"04-photo-gifts.html"},{name:"Personalized Mugs",href:"09-drinkware.html"},{name:"Photo Magic Mug",href:"09-drinkware.html"},{name:"Calendars",href:"02-same-day-delivery.html#calendars"}]},{title:"Drinkware",items:[{name:"Freo Sipper",href:"09-drinkware.html#sippers"},{name:"Cola Can",href:"09-drinkware.html#sippers"},{name:"Zenwood Ceramic Mug",href:"09-drinkware.html#mugs"},{name:"Personalized Sipper",href:"09-drinkware.html#sippers"}]}]},
+"Apparel":{href:"03-apparel.html",columns:[{title:"T-shirts",items:[{name:"Custom Round Neck T-shirts",href:"03-apparel.html#tshirts"},{name:"Ultra Premium Round Neck",href:"03-apparel.html#tshirts",tag:"new"},{name:"Cotton Premium Round Neck",href:"03-apparel.html#tshirts"},{name:"Dry-Fit T-shirts",href:"03-apparel.html#tshirts"},{name:"Recycled Round Neck",href:"03-apparel.html#tshirts"},{name:"Custom Polo T-shirts",href:"03-apparel.html#polo"},{name:"Popcorn Knit Polo",href:"03-apparel.html#polo",tag:"new"},{name:"Ultra Premium Polo",href:"03-apparel.html#polo"}]},{title:"Hoodies & Jackets",items:[{name:"Hoodies & Sweatshirts",href:"03-apparel.html#hoodies"},{name:"Ultra Premium Crew Neck",href:"03-apparel.html#hoodies",tag:"new"},{name:"Eco High Neck Jacket",href:"03-apparel.html#hoodies",tag:"new"},{name:"Ultra Premium Hoodies",href:"03-apparel.html#hoodies"},{name:"Eco Classic Hoodies",href:"03-apparel.html#hoodies"},{name:"High Neck Jackets",href:"03-apparel.html#hoodies"}]},{title:"Branded T-shirts",items:[{name:"Snitch Designer Polo",href:"03-apparel.html#polo",tag:"new"},{name:"Snitch Premium Polo",href:"03-apparel.html#polo",tag:"new"},{name:"Finch Round Neck",href:"03-apparel.html#tshirts",tag:"new"},{name:"Finch Premium Polo",href:"03-apparel.html#polo",tag:"new"},{name:"Levis Round Neck",href:"03-apparel.html#tshirts",tag:"new"},{name:"Levis Premium Polo",href:"03-apparel.html#polo",tag:"new"}]},{title:"Caps & Bags",items:[{name:"Custom Caps",href:"03-apparel.html#accessories"},{name:"Embroidery Caps",href:"03-apparel.html#accessories"},{name:"Backpacks",href:"08-corporate-gifts.html"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"},{name:"Laptop Sleeve",href:"04-photo-gifts.html"},{name:"Jute Bags",href:"06-packaging.html"},{name:"Cotton Carry Bags",href:"06-packaging.html"}]}]},
+"Photo Gifts":{href:"04-photo-gifts.html",columns:[{title:"Most Popular",items:[{name:"Photo Frames",href:"04-photo-gifts.html#frames",tag:"pop"},{name:"Canvas Gallery Wraps",href:"04-photo-gifts.html#frames"},{name:"Acrylic Prints",href:"04-photo-gifts.html#frames",tag:"prem"},{name:"Mugs",href:"09-drinkware.html#mugs"},{name:"Photo Albums",href:"04-photo-gifts.html#frames"}]},{title:"Prints & Decor",items:[{name:"Acrylic Photo Cut Outs",href:"04-photo-gifts.html#frames",tag:"new"},{name:"Photo Prints",href:"04-photo-gifts.html#frames"},{name:"Photo Plaque",href:"04-photo-gifts.html#frames"},{name:"Posters",href:"07-signage.html#marketing"},{name:"Fridge Magnets",href:"04-photo-gifts.html"},{name:"Canvas Prints",href:"04-photo-gifts.html#frames"},{name:"Frameless Photo Frames",href:"04-photo-gifts.html#frames"},{name:"LED Photo Frames",href:"04-photo-gifts.html#frames"}]},{title:"Photo Frames",items:[{name:"Desktop Collage Frames",href:"04-photo-gifts.html#frames",tag:"new"},{name:"Vintage Collection",href:"04-photo-gifts.html#frames",tag:"new"},{name:"Premium Photo Frames",href:"04-photo-gifts.html#frames",tag:"new"},{name:"Classic Photo Frames",href:"04-photo-gifts.html#frames"},{name:"Wall Photo Frames",href:"04-photo-gifts.html#frames"},{name:"Canvas Photo Frames",href:"04-photo-gifts.html#frames"}]},{title:"Albums & Accessories",items:[{name:"Anniversary Albums",href:"04-photo-gifts.html#frames"},{name:"Baby Shower Albums",href:"04-photo-gifts.html#frames"},{name:"Travel Photo Albums",href:"04-photo-gifts.html#frames"},{name:"Tote Bags",href:"06-packaging.html"},{name:"Keychains",href:"04-photo-gifts.html#accessories"},{name:"Pop Socket",href:"04-photo-gifts.html#accessories"},{name:"Personalized Ludo",href:"04-photo-gifts.html#games"},{name:"Playing Cards",href:"04-photo-gifts.html#games"}]}]},
+"Stationery":{href:"05-stationery.html",columns:[{title:"Business Cards",items:[{name:"Standard Business Cards",href:"05-stationery.html#biz",tag:"rec"},{name:"Non Tearable Cards",href:"05-stationery.html#biz"},{name:"Laminated Cards",href:"05-stationery.html#biz"},{name:"Raised Foil Cards",href:"05-stationery.html#biz",tag:"prem"}]},{title:"Notebooks",items:[{name:"Tattva Notebooks",href:"05-stationery.html#biz",tag:"new"},{name:"Wiro Notebook",href:"05-stationery.html#biz"},{name:"Staple Notebook",href:"05-stationery.html#biz"},{name:"Perfect Bind Notebook",href:"05-stationery.html#biz"},{name:"Hard Cover Notebook",href:"05-stationery.html#biz"},{name:"Premium Notebooks",href:"05-stationery.html#biz"}]},{title:"Office Supplies",items:[{name:"Letterheads",href:"05-stationery.html#biz"},{name:"Envelopes",href:"05-stationery.html#biz"},{name:"Rubber Stamps",href:"05-stationery.html#biz"},{name:"Bill Books",href:"05-stationery.html#biz"},{name:"Presentation Folders",href:"05-stationery.html#biz"},{name:"Notepads",href:"05-stationery.html#biz"},{name:"Pens",href:"05-stationery.html#biz"}]},{title:"Cards & Invites",items:[{name:"Wedding Invites",href:"05-stationery.html#biz"},{name:"Thankyou Cards",href:"05-stationery.html#biz"},{name:"Post Cards",href:"05-stationery.html#biz"},{name:"Business Invitations",href:"05-stationery.html#biz"},{name:"Birthday Invites",href:"05-stationery.html#biz"},{name:"Premium Invitations",href:"05-stationery.html#biz"},{name:"ID Cards",href:"05-stationery.html#biz"},{name:"Lanyards",href:"05-stationery.html#biz"}]}]},
+"Packaging":{href:"06-packaging.html",columns:[{title:"Stickers",items:[{name:"Circle Stickers",href:"06-packaging.html#products"},{name:"Square Stickers",href:"06-packaging.html#products"},{name:"Custom Shape Stickers",href:"06-packaging.html#products",tag:"rec"},{name:"Gold Foil Stickers",href:"06-packaging.html#products"},{name:"Silver Foil Stickers",href:"06-packaging.html#products"},{name:"Spot UV Stickers",href:"06-packaging.html#products"}]},{title:"Labels",items:[{name:"Product Packaging Labels",href:"06-packaging.html#products",tag:"pop"},{name:"Transparent Labels",href:"06-packaging.html#products"},{name:"Water Proof Labels",href:"06-packaging.html#products"},{name:"Sheet Labels",href:"06-packaging.html#products"},{name:"Kraft Labels",href:"06-packaging.html#products"},{name:"Premium Labels",href:"06-packaging.html#products"}]},{title:"Boxes & Bags",items:[{name:"Collapsible Gift Boxes",href:"06-packaging.html#products",tag:"new"},{name:"Mailer Boxes",href:"06-packaging.html#products",tag:"rec"},{name:"Food Boxes",href:"06-packaging.html#products"},{name:"Pizza Boxes",href:"06-packaging.html#products"},{name:"Sleeved Mailer Boxes",href:"06-packaging.html#products"},{name:"Paper Bags",href:"06-packaging.html#products"},{name:"Stand up Pouches",href:"06-packaging.html#products"}]},{title:"Hospitality & Tote",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html#essentials"},{name:"Placemats",href:"10-hotels-restaurants.html#essentials"},{name:"Tent Cards",href:"06-packaging.html#accessories"},{name:"Drink Coasters",href:"10-hotels-restaurants.html#essentials"},{name:"Door Hangers",href:"10-hotels-restaurants.html#branding"},{name:"Hangtags",href:"06-packaging.html#accessories"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"},{name:"Cotton Carry Bags",href:"06-packaging.html"}]}]},
+"Signage":{href:"07-signage.html",columns:[{title:"Outdoor Signages",items:[{name:"Banners",href:"07-signage.html#outdoor"},{name:"Standees",href:"07-signage.html#outdoor"},{name:"Board Signs",href:"07-signage.html#outdoor"},{name:"Vehicle Graphics",href:"07-signage.html#outdoor"},{name:"ACP Boards",href:"07-signage.html#outdoor"},{name:"Glow Signs",href:"07-signage.html#outdoor"}]},{title:"Indoor Signs",items:[{name:"Name Plates",href:"07-signage.html#indoor"},{name:"Acrylic Desk Stand",href:"07-signage.html#indoor",tag:"pop"},{name:"Sun Board Posters",href:"07-signage.html#indoor"},{name:"Posters",href:"07-signage.html#marketing"},{name:"Wall Decals",href:"07-signage.html#indoor"},{name:"Door Hangers",href:"07-signage.html#indoor"},{name:"Window Stickers",href:"07-signage.html#indoor"},{name:"Acrylic QR Code Stand",href:"07-signage.html#indoor",tag:"new"}]},{title:"Event Signages",items:[{name:"Event Standees",href:"07-signage.html#outdoor"},{name:"Danglers",href:"07-signage.html#marketing"},{name:"Premium Wall Posters",href:"07-signage.html#marketing"},{name:"Flyers",href:"07-signage.html#marketing"},{name:"Brochures",href:"07-signage.html#marketing"}]},{title:"Custom & Decor",items:[{name:"LED Frames",href:"04-photo-gifts.html#frames"},{name:"Canvas",href:"04-photo-gifts.html#frames"},{name:"Bumper Stickers",href:"06-packaging.html"},{name:"Window Decals",href:"07-signage.html#indoor"},{name:"Wall Frames",href:"04-photo-gifts.html#frames"}]}]},
+"Corporate Gifts":{href:"08-corporate-gifts.html",columns:[{title:"Joining Kits",items:[{name:"The Chapter One",href:"08-corporate-gifts.html#kits",tag:"new"},{name:"The Home Base",href:"08-corporate-gifts.html#kits",tag:"new"},{name:"The Lets Go Kit",href:"08-corporate-gifts.html#kits",tag:"new"},{name:"Premium Welcome Kit",href:"08-corporate-gifts.html#kits"},{name:"Tech Welcome Kit",href:"08-corporate-gifts.html#kits"}]},{title:"Engagement Kits",items:[{name:"Keep Hustling Kit",href:"08-corporate-gifts.html#kits"},{name:"Fresh Start Kit",href:"08-corporate-gifts.html#kits"},{name:"Novelty Kit",href:"08-corporate-gifts.html#kits"},{name:"Diwali Premium Hamper",href:"08-corporate-gifts.html#festive"},{name:"New Year Hamper",href:"08-corporate-gifts.html#festive"},{name:"Christmas Hamper",href:"08-corporate-gifts.html#festive"}]},{title:"Awards & Apparel",items:[{name:"Awards",href:"08-corporate-gifts.html#awards",tag:"pop"},{name:"Crystal Trophies",href:"08-corporate-gifts.html#awards"},{name:"Wooden Plaques",href:"08-corporate-gifts.html#awards"},{name:"Certificates",href:"08-corporate-gifts.html#awards"},{name:"Medals",href:"08-corporate-gifts.html#awards"},{name:"Premium Polo T-shirts",href:"03-apparel.html#polo"},{name:"Branded T-shirts",href:"03-apparel.html#tshirts"}]},{title:"Drinkware & Accessories",items:[{name:"Premium Bottles",href:"09-drinkware.html#sippers",tag:"new"},{name:"Mugs",href:"09-drinkware.html#mugs"},{name:"Sipper Bottles",href:"09-drinkware.html#sippers"},{name:"Backpacks",href:"08-corporate-gifts.html#merch",tag:"new"},{name:"Laptop Sleeves",href:"04-photo-gifts.html#accessories"},{name:"Pens",href:"05-stationery.html#biz"},{name:"Mouse Pad",href:"05-stationery.html#promo"},{name:"Keychains",href:"04-photo-gifts.html#accessories"},{name:"Caps",href:"03-apparel.html#accessories"}]}]},
+"Drinkware":{href:"09-drinkware.html",columns:[{title:"New Launches",items:[{name:"Frosty Sipper",href:"09-drinkware.html#sippers",tag:"new"},{name:"Commuter Sipper",href:"09-drinkware.html#sippers",tag:"new"},{name:"Glass Bottle Jute Sleeve",href:"09-drinkware.html#sippers",tag:"new"},{name:"Radiate Tumbler",href:"09-drinkware.html#tumblers",tag:"new"}]},{title:"Best Sellers",items:[{name:"Freo Insulated Bottle",href:"09-drinkware.html#sippers",tag:"best"},{name:"Paramount Sipper Blue",href:"09-drinkware.html#sippers"},{name:"Lanky Hot & Cold Sipper",href:"09-drinkware.html#tumblers"},{name:"Elite Sipper Black",href:"09-drinkware.html#sippers"},{name:"Pexpo Oreo",href:"09-drinkware.html#sippers"},{name:"Cola Can",href:"09-drinkware.html#sippers"}]},{title:"Premium Mugs",items:[{name:"Jumbo Mug White",href:"09-drinkware.html#mugs"},{name:"Dazzle Dark Grey Mug",href:"09-drinkware.html#mugs"},{name:"Endear Spill Free Mug",href:"09-drinkware.html#mugs"},{name:"Rockstar Spill Free",href:"09-drinkware.html#mugs"},{name:"Photo Magic Mug",href:"09-drinkware.html#mugs"},{name:"Beer Mug",href:"09-drinkware.html#mugs"}]},{title:"Sipper Bottles",items:[{name:"Vega SS Bottle",href:"09-drinkware.html#sippers"},{name:"PureGrip Borosilicate",href:"09-drinkware.html#sippers"},{name:"Prime Sipper White",href:"09-drinkware.html#sippers"},{name:"Personalized 600ml",href:"09-drinkware.html#sippers"},{name:"Spout Sipper 750ml",href:"09-drinkware.html#sippers"},{name:"Mason Jar",href:"09-drinkware.html#tumblers"}]}]},
+"Hotels & Restaurants":{href:"10-hotels-restaurants.html",columns:[{title:"Cafe Essentials",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html#essentials",tag:"pop"},{name:"Placemats",href:"10-hotels-restaurants.html#essentials"},{name:"Coasters",href:"10-hotels-restaurants.html#essentials"},{name:"Business Cards",href:"10-hotels-restaurants.html#essentials"},{name:"Rubber Stamp",href:"10-hotels-restaurants.html#essentials"},{name:"Acrylic QR Stand",href:"10-hotels-restaurants.html#essentials",tag:"new"}]},{title:"Takeaway",items:[{name:"Packaging Labels",href:"10-hotels-restaurants.html#takeaway",tag:"best"},{name:"Food Boxes",href:"10-hotels-restaurants.html#takeaway"},{name:"Packing Tape",href:"10-hotels-restaurants.html#takeaway"},{name:"Takeout Paper Bags",href:"10-hotels-restaurants.html#takeaway"},{name:"Paper Pouches",href:"10-hotels-restaurants.html#takeaway"},{name:"Cotton Carry Bags",href:"10-hotels-restaurants.html#takeaway"}]},{title:"Decor & Staff",items:[{name:"Decals",href:"10-hotels-restaurants.html#decor"},{name:"Posters",href:"10-hotels-restaurants.html#decor"},{name:"LED Photo Frames",href:"10-hotels-restaurants.html#decor"},{name:"Standees",href:"10-hotels-restaurants.html#decor"},{name:"Polo T-shirts",href:"10-hotels-restaurants.html#staff"},{name:"Caps",href:"10-hotels-restaurants.html#staff"},{name:"Button Badges",href:"10-hotels-restaurants.html#staff"}]},{title:"Safety & Branding",items:[{name:"Safety Decals",href:"10-hotels-restaurants.html#safety"},{name:"Safety Posters",href:"10-hotels-restaurants.html#safety"},{name:"Window Decals",href:"10-hotels-restaurants.html#safety"},{name:"Flyers",href:"10-hotels-restaurants.html#branding"},{name:"Brochures",href:"10-hotels-restaurants.html#branding"},{name:"Stickers",href:"10-hotels-restaurants.html#branding"},{name:"Thank You Cards",href:"10-hotels-restaurants.html#branding"}]}]}
+};
+function getTagLabel(tag){const labels={'new':'NEW','best':'Best Seller','pop':'Popular','fast':'Fast','rec':'Recommended','prem':'Premium'};return labels[tag]||tag.toUpperCase()}
+function buildMenuItem(name,data,active){const cols=data.columns.map(col=>`<div class="mm-col"><h3>${col.title}</h3><ul>${col.items.map(item=>`<li><a href="${item.href}"><span>${item.name}</span>${item.tag?`<span class="mm-tag ${item.tag}">${getTagLabel(item.tag)}</span>`:''}</a></li>`).join('')}</ul></div>`).join('');return `<li class="mm-item${active?' active':''}"><a class="mm-link${active?' active':''}" href="${data.href}" data-name="${name}">${name}<span class="arrow">▼</span></a><div class="mm-dropdown"><div class="mm-grid">${cols}</div><div class="mm-footer-bar"><span style="font-size:13px;color:#6b6b6b">Explore all ${name}</span><a href="${data.href}" class="mm-view-all">View All →</a></div></div></li>`}
+function renderMM(activePage){const list=document.getElementById('mmList');if(!list)return;const items=Object.entries(MENU).map(([name,data])=>buildMenuItem(name,data,data.href===activePage)).join('');list.innerHTML=`<button class="mm-item-close" id="mobClose">✕</button>${items}`;attachMM()}
+function attachMM(){const items=document.querySelectorAll('.mm-item:not([id="mobClose"])');const isMob=()=>window.innerWidth<=1024;items.forEach(item=>{const link=item.querySelector('.mm-link');if(!link)return;item.addEventListener('mouseenter',()=>{if(!isMob()){items.forEach(i=>i.classList.remove('open'));item.classList.add('open')}});item.addEventListener('mouseleave',()=>{if(!isMob())item.classList.remove('open')});link.addEventListener('click',(e)=>{if(isMob()){e.preventDefault();const wasOpen=item.classList.contains('open');items.forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}})});const mobToggle=document.getElementById('mobToggle');const mmList=document.getElementById('mmList');const mobClose=document.getElementById('mobClose');if(mobToggle){mobToggle.addEventListener('click',()=>{mmList.classList.add('show');document.body.classList.add('mm-open')})}if(mobClose){mobClose.addEventListener('click',()=>{mmList.classList.remove('show');document.body.classList.remove('mm-open');items.forEach(i=>i.classList.remove('open'))})}document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){mmList?.classList.remove('show');document.body.classList.remove('mm-open');items.forEach(i=>i.classList.remove('open'))}});document.querySelectorAll('.mm-col a, .mm-view-all').forEach(link=>{link.addEventListener('click',()=>{if(isMob()){mmList.classList.remove('show');document.body.classList.remove('mm-open')}})})}
+renderMM(window.location.pathname.split('/').pop()||'01-all-products.html');
+</script>
+</body>
+</html>
