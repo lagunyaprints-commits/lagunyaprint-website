@@ -379,5 +379,39 @@ renderMenu();
 
 window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('sc',scrollY>10)});
 </script>
+
+<script>
+/* BULLETPROOF HOVER FIX - forces dropdown via inline styles, bypasses CSS conflicts */
+(function(){
+  function initHoverFix(){
+    var items = document.querySelectorAll('.mm-item');
+    if(items.length === 0){ setTimeout(initHoverFix, 200); return; }
+    var isMobile = function(){ return window.innerWidth <= 1024; };
+    items.forEach(function(item){
+      var dd = item.querySelector('.mm-dropdown');
+      if(!dd) return;
+      // Desktop: hover shows dropdown
+      item.addEventListener('mouseenter', function(){
+        if(isMobile()) return;
+        dd.style.display = 'block';
+        dd.style.opacity = '1';
+        dd.style.visibility = 'visible';
+        dd.style.pointerEvents = 'auto';
+        dd.style.maxHeight = 'none';
+        dd.style.transform = 'none';
+      });
+      item.addEventListener('mouseleave', function(){
+        if(isMobile()) return;
+        dd.style.display = 'none';
+      });
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){ setTimeout(initHoverFix, 100); });
+  } else {
+    setTimeout(initHoverFix, 100);
+  }
+})();
+</script>
 </body>
 </html>
