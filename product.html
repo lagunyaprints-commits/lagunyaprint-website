@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | LagunyaPrint</title>
+<meta name="description" content="Premium custom printing products by LagunyaPrint. Order online via WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e63329;--red-dark:#c42a22;--red-light:#fff1f0;--orange:#ff6b35;--dark:#111;--surface:#f9f9f9;--card:#fff;--text:#2d2d2d;--text-light:#6b6b6b;--border:#e8e8e8;--radius:16px;--pill:999px;--shadow-mega:0 24px 60px rgba(0,0,0,.18);--ease:all .3s cubic-bezier(.4,0,.2,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;color:var(--text);background:var(--card);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:block}ul{list-style:none}
+
+.ab{background:linear-gradient(135deg,var(--red),var(--orange));color:#fff;text-align:center;padding:10px 40px 10px 20px;font-size:13px;font-weight:500;position:relative}
+.ab.h{display:none}
+.ab .x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border:none;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer}
+
+.hdr{background:var(--card);position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--border)}
+.hdr.sc{box-shadow:0 4px 30px rgba(0,0,0,.08)}
+.ht{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.logo{font-family:Outfit;font-weight:800;font-size:22px;color:var(--red);letter-spacing:-.5px}
+.hl{display:flex;gap:18px;align-items:center}
+.hl a{font-size:13px;color:var(--text-light);font-weight:500}
+.hl .b{background:var(--red);color:#fff;padding:8px 18px;border-radius:var(--pill);font-weight:600}
+
+/* MEGA MENU */
+.mm-nav{background:var(--card);border-top:1px solid var(--border);position:relative}
+.mm-list{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:0;overflow:visible;position:relative;list-style:none}
+.mm-item{position:relative;flex-shrink:0}
+.mm-link{display:flex;align-items:center;gap:6px;padding:14px 18px;font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;cursor:pointer;transition:var(--ease);border-bottom:3px solid transparent;user-select:none}
+.mm-item:hover > .mm-link,.mm-item.open > .mm-link,.mm-link.active{color:var(--red);border-bottom-color:var(--red);background:var(--red-light)}
+.mm-link .arrow{font-size:10px;transition:transform .3s ease;opacity:.6}
+.mm-item:hover > .mm-link .arrow,.mm-item.open > .mm-link .arrow{transform:rotate(180deg)}
+.mm-dropdown{position:absolute;top:100%;left:0;background:var(--card);border-radius:0 0 16px 16px;box-shadow:var(--shadow-mega);padding:30px 32px;width:1000px;max-width:calc(100vw - 48px);z-index:999;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s ease,transform .25s ease,visibility .25s;border-top:3px solid var(--red);pointer-events:none}
+.mm-item:hover > .mm-dropdown,.mm-item.open > .mm-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mm-item::after{content:'';position:absolute;top:100%;left:0;right:0;height:0;background:transparent;pointer-events:none}
+.mm-item:hover::after{height:15px;pointer-events:auto}
+.mm-item:nth-last-child(-n+4) .mm-dropdown{left:auto;right:0}
+.mm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.mm-col h3{font-family:Outfit;font-size:13px;font-weight:700;color:var(--red);margin-bottom:16px;text-transform:uppercase;letter-spacing:.8px;padding-bottom:8px;border-bottom:2px solid var(--red-light)}
+.mm-col ul{padding:0;margin:0}
+.mm-col li{margin-bottom:8px}
+.mm-col a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;color:var(--text);padding:6px 8px;border-radius:6px;transition:var(--ease);font-weight:500}
+.mm-col a:hover{background:var(--red-light);color:var(--red);padding-left:12px}
+.mm-tag{font-size:9px;padding:2px 8px;border-radius:var(--pill);font-weight:700;letter-spacing:.5px;text-transform:uppercase;flex-shrink:0;color:#fff}
+.mm-tag.new{background:#10b981}.mm-tag.best{background:var(--red)}.mm-tag.pop{background:var(--orange)}.mm-tag.fast{background:#f59e0b}.mm-tag.rec{background:#3b82f6}.mm-tag.prem{background:#8b5cf6}
+.mm-footer-bar{margin-top:24px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.mm-view-all{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--red);padding:8px 16px;border-radius:var(--pill);border:2px solid var(--red);transition:var(--ease)}
+.mm-view-all:hover{background:var(--red);color:#fff}
+.mm-mobile-toggle{display:none;background:none;border:none;font-size:24px;color:var(--dark);cursor:pointer;padding:8px 12px}
+.mm-item-close{display:none}
+@media(max-width:1024px){
+  .mm-mobile-toggle{display:block}
+  .mm-list{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--card);flex-direction:column;padding:80px 0 40px;z-index:999;overflow-y:auto;transform:translateX(-100%);transition:transform .3s ease}
+  .mm-list.show{transform:translateX(0)}
+  .mm-item-close{display:block;position:fixed;top:20px;right:20px;background:var(--red);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;z-index:1001}
+  .mm-item{width:100%;border-bottom:1px solid var(--border)}
+  .mm-link{padding:16px 24px;justify-content:space-between;width:100%}
+  .mm-item:hover > .mm-dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto;max-height:0}
+  .mm-item.open > .mm-dropdown{max-height:2000px}
+  .mm-dropdown{position:static;transform:none;box-shadow:none;width:100%;max-width:100%;padding:0;border-radius:0;border:none;background:var(--surface);max-height:0;overflow:hidden;opacity:1;visibility:visible;transition:max-height .3s ease;pointer-events:auto}
+  .mm-grid{grid-template-columns:1fr;gap:0;padding:0 24px}
+  .mm-col{padding:16px 0;border-bottom:1px solid var(--border)}
+  .mm-footer-bar{padding:16px 24px;flex-direction:column;gap:12px}
+  body.mm-open{overflow:hidden}
+  .mm-item:hover::after{display:none}
+}
+
+.bc{max-width:1280px;margin:0 auto;padding:20px 24px 0;font-size:13px;color:var(--text-light)}
+.bc a:hover{color:var(--red)}.bc b{color:var(--text)}
+
+/* PRODUCT DETAIL */
+.product{max-width:1280px;margin:0 auto;padding:30px 24px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.gallery .main-img{width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface)}
+.gallery .main-img img{width:100%;height:100%;object-fit:cover}
+.gallery .thumbs{display:flex;gap:12px;margin-top:14px}
+.gallery .thumb{width:80px;height:80px;border-radius:10px;overflow:hidden;border:2px solid var(--border);cursor:pointer;transition:var(--ease)}
+.gallery .thumb.active,.gallery .thumb:hover{border-color:var(--red)}
+.gallery .thumb img{width:100%;height:100%;object-fit:cover}
+.trust-badges{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap}
+.tb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-light);background:var(--surface);padding:8px 14px;border-radius:var(--pill)}
+
+.pinfo .cat{font-size:12px;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.pinfo h1{font-family:Outfit;font-size:34px;font-weight:800;line-height:1.1;margin-bottom:12px}
+.pinfo .rating{display:flex;align-items:center;gap:8px;margin-bottom:16px;font-size:13px;color:var(--text-light)}
+.pinfo .rating .stars{color:#f59e0b}
+.pinfo .desc{font-size:15px;color:var(--text-light);margin-bottom:24px}
+
+.price-box{background:var(--surface);border-radius:var(--radius);padding:20px;margin-bottom:24px}
+.price-box .label{font-size:12px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.price-box .price{font-family:Outfit;font-size:36px;font-weight:800;color:var(--red)}
+.price-box .price small{font-size:15px;color:var(--text-light);font-weight:500}
+.price-box .old-price{font-size:16px;color:var(--text-light);text-decoration:line-through;margin-left:10px}
+.price-box .save{display:inline-block;background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--pill);margin-left:10px}
+
+.opt-group{margin-bottom:22px}
+.opt-group .opt-label{font-size:14px;font-weight:700;margin-bottom:10px}
+.opt-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.opt-btn{padding:10px 18px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;transition:var(--ease);background:#fff}
+.opt-btn:hover{border-color:var(--red)}
+.opt-btn.active{border-color:var(--red);background:var(--red-light);color:var(--red)}
+
+.qty-group{margin-bottom:24px}
+.qty-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.qty-btn{padding:14px 22px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:var(--ease);text-align:center;background:#fff;min-width:100px}
+.qty-btn:hover{border-color:var(--red)}
+.qty-btn.active{border-color:var(--red);background:var(--red-light)}
+.qty-btn .q{font-size:16px;font-weight:800;display:block}
+.qty-btn .p{font-size:12px;color:var(--text-light)}
+.qty-btn.active .p{color:var(--red)}
+
+.total-box{background:var(--dark);color:#fff;border-radius:var(--radius);padding:20px 24px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+.total-box .t-label{font-size:13px;opacity:.7}
+.total-box .t-price{font-family:Outfit;font-size:32px;font-weight:800}
+
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#25D366;color:#fff;padding:18px;border-radius:var(--pill);font-size:17px;font-weight:700;cursor:pointer;transition:var(--ease);border:none;margin-bottom:12px}
+.wa-btn:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.4)}
+.call-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:#fff;color:var(--red);padding:16px;border-radius:var(--pill);font-size:15px;font-weight:700;cursor:pointer;transition:var(--ease);border:2px solid var(--red)}
+.call-btn:hover{background:var(--red);color:#fff}
+
+.features-list{max-width:1280px;margin:0 auto;padding:40px 24px}
+.features-list h2{font-family:Outfit;font-size:24px;font-weight:700;margin-bottom:20px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat-card{background:var(--surface);border-radius:var(--radius);padding:24px;text-align:center}
+.feat-card .ic{font-size:36px;margin-bottom:10px}
+.feat-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.feat-card p{font-size:13px;color:var(--text-light)}
+
+.specs{max-width:1280px;margin:0 auto;padding:20px 24px 40px}
+.specs h2{font-family:Outfit;font-size:24px;font-weight:700;margin-bottom:20px}
+.specs table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+.specs td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:14px}
+.specs td:first-child{font-weight:700;width:40%;background:var(--surface)}
+.specs tr:last-child td{border-bottom:none}
+
+/* RELATED PRODUCTS */
+.related{max-width:1280px;margin:0 auto;padding:20px 24px 50px}
+.related h2{font-family:Outfit;font-size:24px;font-weight:700;margin-bottom:20px}
+.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rel-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--ease)}
+.rel-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.1);border-color:var(--red)}
+.rel-card img{width:100%;aspect-ratio:1;object-fit:cover}
+.rel-card .rc-body{padding:12px 14px}
+.rel-card .rc-body h3{font-size:14px;font-weight:700;margin-bottom:4px}
+.rel-card .rc-body p{font-size:12px;color:var(--red);font-weight:700}
+
+.divider{height:4px;background:linear-gradient(90deg,var(--orange),var(--red),var(--orange));opacity:.2}
+
+.ft{background:var(--dark);color:#fff;padding:50px 24px 25px}
+.ft-in{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+.ft h3{font-size:12px;font-weight:700;margin-bottom:14px;opacity:.5;text-transform:uppercase;letter-spacing:1px}
+.ft a{display:block;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px}
+.ft a:hover{color:#fff}
+.ft-brand .logo{color:#fff}
+.ft-brand p{color:rgba(255,255,255,.4);font-size:12px;margin-top:8px}
+.ft-bot{max-width:1280px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:11px;color:rgba(255,255,255,.3)}
+
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:2000;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 30px rgba(37,211,102,.5);cursor:pointer;transition:var(--ease);animation:pulse 2s infinite;border:none}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,.5)}50%{box-shadow:0 8px 40px rgba(37,211,102,.7)}}
+.wa-float:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .product{grid-template-columns:1fr;gap:30px}
+  .pinfo h1{font-size:26px}
+  .feat-grid{grid-template-columns:1fr}
+  .rel-grid{grid-template-columns:1fr 1fr}
+  .ft-in{grid-template-columns:1fr 1fr}
+  .hl .hm{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ab">⚡ Same Day Delivery Available — Order before 4:30 PM<button class="x" onclick="this.parentElement.classList.add('h')">✕</button></div>
+
+<header class="hdr" id="hdr">
+  <div class="ht">
+    <a href="index.html" class="logo">LagunyaPrint</a>
+    <div class="hl">
+      <a href="#" class="hm">Track Order</a>
+      <a href="#" class="hm">Store Locator</a>
+      <a href="#" class="b">Login</a>
+      <button class="mm-mobile-toggle" id="mobToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <nav class="mm-nav"><ul class="mm-list" id="mmList"></ul></nav>
+</header>
+
+<div class="bc" id="breadcrumb"><a href="index.html">Home</a></div>
+
+<section class="product">
+  <div class="gallery">
+    <div class="main-img"><img id="mainImg" src="" alt="Product"></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="trust-badges">
+      <div class="tb">🚚 Same Day Delivery</div>
+      <div class="tb">✅ Premium Quality</div>
+      <div class="tb">🎨 Free Design Help</div>
+    </div>
+  </div>
+
+  <div class="pinfo">
+    <div class="cat" id="pCat"></div>
+    <h1 id="pName"></h1>
+    <div class="rating"><span class="stars" id="pStars">★★★★★</span><span id="pReviews"></span></div>
+    <p class="desc" id="pDesc"></p>
+
+    <div class="price-box">
+      <div class="label">Starting Price</div>
+      <div class="price">₹<span id="startPrice"></span> <small>onwards</small><span class="old-price" id="oldPrice"></span><span class="save" id="saveTag"></span></div>
+    </div>
+
+    <div id="optionsArea"></div>
+
+    <div class="qty-group">
+      <div class="opt-label">📦 Select Quantity</div>
+      <div class="qty-buttons" id="qtyBtns"></div>
+    </div>
+
+    <div class="total-box">
+      <div><div class="t-label">Total (<span id="totalQty"></span> <span id="unitLabel">pcs</span>)</div></div>
+      <div class="t-price">₹<span id="totalPrice"></span></div>
+    </div>
+
+    <button class="wa-btn" onclick="orderWhatsApp()">📱 Customize & Order on WhatsApp</button>
+    <a class="call-btn" href="tel:+919560597115">📞 Call to Order: 9560597115</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="features-list">
+  <h2>Why Choose LagunyaPrint?</h2>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="ic">💎</div><h3>Premium Quality</h3><p>High-grade materials with sharp, vibrant printing that lasts.</p></div>
+    <div class="feat-card"><div class="ic">🎨</div><h3>Free Design Support</h3><p>Our team helps you design perfectly at no extra cost.</p></div>
+    <div class="feat-card"><div class="ic">⚡</div><h3>Same Day Delivery</h3><p>Order before 4:30 PM for same-day delivery in select cities.</p></div>
+  </div>
+</section>
+
+<section class="specs">
+  <h2>Product Specifications</h2>
+  <table id="specsTable"></table>
+</section>
+
+<section class="related">
+  <h2>You May Also Like</h2>
+  <div class="rel-grid" id="relGrid"></div>
+</section>
+
+<footer class="ft"><div class="ft-in">
+  <div class="ft-brand"><div class="logo">LagunyaPrint</div><p>India's Fastest Custom Printing</p></div>
+  <div><h3>Quick Links</h3><a href="01-all-products.html">All Products</a><a href="02-same-day-delivery.html">Same Day Delivery</a><a href="05-stationery.html">Stationery</a></div>
+  <div><h3>Categories</h3><a href="03-apparel.html">Apparel</a><a href="04-photo-gifts.html">Photo Gifts</a><a href="06-packaging.html">Packaging</a></div>
+  <div><h3>Contact</h3><a href="tel:+919560597115">📞 9560597115</a><a href="https://wa.me/919560597115">📱 WhatsApp</a></div>
+</div><div class="ft-bot">© 2025 LagunyaPrint. All rights reserved.</div></footer>
+
+<button class="wa-float" onclick="orderWhatsApp()" title="Order on WhatsApp">📱</button>
+
+<script>
+/* ═══════════════════════════════════════════════
+   PRODUCTS DATABASE — PART 1: STATIONERY (25 products)
+   Add more parts here later. slug: product.html?p=slug
+   ═══════════════════════════════════════════════ */
+const PRODUCTS = {
+
+/* ---- BUSINESS CARDS ---- */
+"non-tearable-cards":{name:"Non-Tearable Business Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_1.jpg","images/home/img_12.jpg","images/stationery/img_3.jpg"],rating:"4.8",reviews:"860 reviews",desc:"Waterproof, tear-proof synthetic business cards that last for years. Perfect for premium first impressions that survive wallets, rain and time.",
+options:[{label:"🖨️ Printing Side",key:"side",choices:["Single Side","Both Sides"]},{label:"✨ Finish",key:"finish",choices:["Matte","Glossy"]}],
+qty:[{q:100,p:499},{q:250,p:999},{q:500,p:1699},{q:1000,p:2999}],old:799,unit:"cards",
+specs:[["Material","Synthetic Non-Tearable Sheet"],["Size","3.5\" x 2\" (89 x 51 mm)"],["Printing","Full colour, single/both sides"],["Feature","Waterproof & Tear-resistant"],["Min Order","100 cards"],["Delivery","Same day (select cities) or 2-4 days"]],
+related:["laminated-cards","raised-foil-cards","letterheads","id-cards"]},
+
+"laminated-cards":{name:"Laminated Business Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_3.jpg","images/stationery/img_1.jpg","images/home/img_12.jpg"],rating:"4.7",reviews:"1,120 reviews",desc:"Smooth laminated finish business cards with rich colour depth. Choose matte for elegance or glossy for vibrance.",
+options:[{label:"✨ Lamination",key:"lam",choices:["Matte Lamination","Glossy Lamination"]},{label:"🖨️ Printing Side",key:"side",choices:["Single Side","Both Sides"]}],
+qty:[{q:100,p:349},{q:250,p:699},{q:500,p:1199},{q:1000,p:2099}],old:549,unit:"cards",
+specs:[["Material","350 GSM Art Card + Lamination"],["Size","3.5\" x 2\" (89 x 51 mm)"],["Printing","Full colour offset/digital"],["Finish","Matte / Glossy lamination"],["Min Order","100 cards"],["Delivery","Same day (select cities) or 2-4 days"]],
+related:["non-tearable-cards","raised-foil-cards","letterheads","presentation-folders"]},
+
+"raised-foil-cards":{name:"Raised Foil Business Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_5.jpg","images/stationery/img_1.jpg","images/stationery/img_3.jpg"],rating:"4.9",reviews:"430 reviews",desc:"Luxury business cards with raised gold or silver foil accents. The ultimate premium statement for executives and luxury brands.",
+options:[{label:"✨ Foil Colour",key:"foil",choices:["Gold Foil","Silver Foil","Rose Gold"]},{label:"📄 Base",key:"base",choices:["Matte Black","Classic White"]}],
+qty:[{q:100,p:1499},{q:250,p:3199},{q:500,p:5499}],old:2199,unit:"cards",
+specs:[["Material","600 GSM Premium Board"],["Size","3.5\" x 2\" (89 x 51 mm)"],["Feature","Raised (embossed) foil accents"],["Foil Options","Gold / Silver / Rose Gold"],["Min Order","100 cards"],["Delivery","3-5 business days"]],
+related:["laminated-cards","non-tearable-cards","premium-invitations","wedding-invites"]},
+
+/* ---- NOTEBOOKS ---- */
+"tattva-notebooks":{name:"Tattva Premium Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_7.jpg","images/stationery/img_8.jpg","images/stationery/img_9.jpg"],rating:"4.8",reviews:"540 reviews",desc:"Eco-crafted premium notebooks with custom branding. Perfect for corporate gifting and daily journaling with a natural touch.",
+options:[{label:"📓 Size",key:"size",choices:["A5","A4"]},{label:"📄 Pages",key:"pages",choices:["120 Pages","200 Pages"]}],
+qty:[{q:25,p:2249},{q:50,p:4249},{q:100,p:7999},{q:250,p:18749}],old:120,unit:"notebooks",
+specs:[["Cover","Eco Kraft / Custom printed"],["Sizes","A5 (148x210mm), A4 (210x297mm)"],["Binding","Perfect bind"],["Pages","120 / 200 ruled pages"],["Min Order","25 notebooks"],["Delivery","4-6 business days"]],
+related:["wiro-notebook","hard-cover-notebook","premium-notebooks","pens"]},
+
+"wiro-notebook":{name:"Wiro Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_8.jpg","images/stationery/img_7.jpg","images/stationery/img_10.jpg"],rating:"4.6",reviews:"920 reviews",desc:"Spiral-bound wiro notebooks that lay flat for easy writing. Customise the cover with your logo, design or photos.",
+options:[{label:"📓 Size",key:"size",choices:["A5","A4","B5"]},{label:"📄 Ruling",key:"rule",choices:["Ruled","Plain","Dotted"]}],
+qty:[{q:25,p:1749},{q:50,p:3249},{q:100,p:5999},{q:250,p:13749}],old:90,unit:"notebooks",
+specs:[["Binding","Double wire-o spiral"],["Cover","300 GSM printed + lamination"],["Sizes","A5 / A4 / B5"],["Pages","100 pages, 70 GSM"],["Min Order","25 notebooks"],["Delivery","3-5 business days"]],
+related:["staple-notebook","tattva-notebooks","perfect-bind-notebook","notepads"]},
+
+"staple-notebook":{name:"Staple Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_9.jpg","images/stationery/img_8.jpg","images/stationery/img_7.jpg"],rating:"4.5",reviews:"680 reviews",desc:"Budget-friendly saddle-stitched notebooks, great for events, schools and bulk corporate distribution.",
+options:[{label:"📓 Size",key:"size",choices:["A5","A6 Pocket"]},{label:"📄 Pages",key:"pages",choices:["32 Pages","48 Pages","64 Pages"]}],
+qty:[{q:50,p:1499},{q:100,p:2749},{q:250,p:6249},{q:500,p:11499}],old:45,unit:"notebooks",
+specs:[["Binding","Saddle stitch (staple)"],["Cover","250 GSM printed"],["Sizes","A5 / A6"],["Pages","32-64 pages"],["Min Order","50 notebooks"],["Delivery","3-4 business days"]],
+related:["wiro-notebook","notepads","perfect-bind-notebook","pens"]},
+
+"perfect-bind-notebook":{name:"Perfect Bind Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_10.jpg","images/stationery/img_7.jpg","images/stationery/img_8.jpg"],rating:"4.7",reviews:"390 reviews",desc:"Bookstore-quality perfect bound notebooks with square spine — ideal for premium journals and planners.",
+options:[{label:"📓 Size",key:"size",choices:["A5","A4"]},{label:"📄 Pages",key:"pages",choices:["150 Pages","200 Pages"]}],
+qty:[{q:25,p:2499},{q:50,p:4749},{q:100,p:8999}],old:135,unit:"notebooks",
+specs:[["Binding","Perfect bind (glued square spine)"],["Cover","300 GSM + matte lamination"],["Pages","150-200 pages, 80 GSM"],["Min Order","25 notebooks"],["Delivery","5-7 business days"]],
+related:["hard-cover-notebook","tattva-notebooks","wiro-notebook","premium-notebooks"]},
+
+"hard-cover-notebook":{name:"Hard Cover Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_11.jpg","images/stationery/img_10.jpg","images/stationery/img_7.jpg"],rating:"4.8",reviews:"470 reviews",desc:"Durable hardbound notebooks with elastic band and ribbon marker. The executive choice for meetings and gifting.",
+options:[{label:"🎨 Cover Colour",key:"color",choices:["Black","Blue","Maroon","Custom Print"]},{label:"📓 Size",key:"size",choices:["A5","A4"]}],
+qty:[{q:25,p:3749},{q:50,p:6999},{q:100,p:12999}],old:199,unit:"notebooks",
+specs:[["Cover","Hardbound with PU leather / print"],["Extras","Elastic band, ribbon bookmark"],["Pages","192 pages, 80 GSM cream"],["Branding","Foil / UV logo printing"],["Min Order","25 notebooks"],["Delivery","5-7 business days"]],
+related:["premium-notebooks","perfect-bind-notebook","tattva-notebooks","pens"]},
+
+"premium-notebooks":{name:"Premium Notebooks",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_12.jpg","images/stationery/img_11.jpg","images/stationery/img_10.jpg"],rating:"4.9",reviews:"310 reviews",desc:"Top-of-the-line notebooks with soft-touch covers, gilded edges and premium paper. Luxury corporate gifting at its finest.",
+options:[{label:"✨ Edge",key:"edge",choices:["Gold Gilded","Silver Gilded","Plain"]},{label:"📓 Size",key:"size",choices:["A5"]}],
+qty:[{q:25,p:4999},{q:50,p:9499},{q:100,p:17999}],old:260,unit:"notebooks",
+specs:[["Cover","Soft-touch PU with debossing"],["Paper","100 GSM ivory premium"],["Edges","Gilded gold/silver option"],["Min Order","25 notebooks"],["Delivery","7-8 business days"]],
+related:["hard-cover-notebook","tattva-notebooks","raised-foil-cards","pens"]},
+
+/* ---- OFFICE SUPPLIES ---- */
+"letterheads":{name:"Letterheads",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_2.jpg","images/stationery/img_13.jpg","images/stationery/img_14.jpg"],rating:"4.7",reviews:"1,540 reviews",desc:"Professional A4 letterheads on premium paper — the foundation of your business correspondence and brand identity.",
+options:[{label:"📄 Paper",key:"paper",choices:["90 GSM Standard","100 GSM Premium","Bond Paper"]},{label:"🖨️ Colour",key:"color",choices:["Full Colour","Single Colour"]}],
+qty:[{q:100,p:499},{q:250,p:999},{q:500,p:1749},{q:1000,p:2999}],old:799,unit:"sheets",
+specs:[["Size","A4 (210 x 297 mm)"],["Paper","90-100 GSM / Bond"],["Printing","Offset full colour"],["Min Order","100 sheets"],["Delivery","2-4 business days"]],
+related:["envelopes","bill-books","rubber-stamps","presentation-folders"]},
+
+"envelopes":{name:"Custom Envelopes",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_13.jpg","images/stationery/img_2.jpg","images/stationery/img_14.jpg"],rating:"4.6",reviews:"780 reviews",desc:"Branded envelopes in all standard sizes with your logo and design. Complete your professional stationery set.",
+options:[{label:"📐 Size",key:"size",choices:["DL (Cheque)","A4 Full","A5 Half","Square"]},{label:"📄 Paper",key:"paper",choices:["100 GSM White","Kraft Brown"]}],
+qty:[{q:100,p:599},{q:250,p:1249},{q:500,p:2249},{q:1000,p:3999}],old:899,unit:"envelopes",
+specs:[["Sizes","DL / A4 / A5 / Square"],["Paper","100 GSM white or kraft"],["Printing","Full colour, outside"],["Min Order","100 envelopes"],["Delivery","3-5 business days"]],
+related:["letterheads","wedding-invites","thankyou-cards","post-cards"]},
+
+"rubber-stamps":{name:"Rubber Stamps",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_14.jpg","images/stationery/img_2.jpg","images/stationery/img_13.jpg"],rating:"4.8",reviews:"2,100 reviews",desc:"Self-inking and traditional rubber stamps for office, legal and business use. Sharp impressions, long-lasting.",
+options:[{label:"🔖 Type",key:"type",choices:["Self-Inking","Traditional Wood","Pocket Stamp"]},{label:"📐 Size",key:"size",choices:["Small (38x14mm)","Medium (47x18mm)","Large (58x22mm)"]}],
+qty:[{q:1,p:249},{q:2,p:449},{q:5,p:999},{q:10,p:1799}],old:399,unit:"stamps",
+specs:[["Types","Self-inking / Wood / Pocket"],["Ink Colours","Blue, Black, Red, Green"],["Impressions","10,000+ (self-inking)"],["Min Order","1 stamp"],["Delivery","Same day (select cities) or 2-3 days"]],
+related:["letterheads","bill-books","id-cards","envelopes"]},
+
+"bill-books":{name:"Bill Books / Invoice Books",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_15.jpg","images/stationery/img_2.jpg","images/stationery/img_14.jpg"],rating:"4.7",reviews:"1,890 reviews",desc:"Custom bill books with duplicate/triplicate carbonless copies. GST-ready formats for shops, services and businesses.",
+options:[{label:"📑 Copies",key:"copies",choices:["Duplicate (2 copy)","Triplicate (3 copy)"]},{label:"📐 Size",key:"size",choices:["A5","A4","1/3 A4 (Slim)"]}],
+qty:[{q:5,p:999},{q:10,p:1799},{q:25,p:3999},{q:50,p:7499}],old:299,unit:"books",
+specs:[["Paper","Carbonless NCR paper"],["Pages","50 sets per book"],["Numbering","Serial numbering included"],["Format","GST-compliant custom format"],["Min Order","5 books"],["Delivery","3-5 business days"]],
+related:["letterheads","rubber-stamps","envelopes","notepads"]},
+
+"presentation-folders":{name:"Presentation Folders",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_16.jpg","images/stationery/img_2.jpg","images/stationery/img_13.jpg"],rating:"4.6",reviews:"420 reviews",desc:"Premium A4 presentation folders with business card slot and document pockets. Elevate every client meeting.",
+options:[{label:"📄 Board",key:"board",choices:["300 GSM","350 GSM Premium"]},{label:"✨ Finish",key:"finish",choices:["Matte Lamination","Glossy Lamination","Spot UV"]}],
+qty:[{q:50,p:2249},{q:100,p:3999},{q:250,p:8749},{q:500,p:15999}],old:65,unit:"folders",
+specs:[["Size","A4 with 5mm spine"],["Board","300-350 GSM art board"],["Features","Pocket + business card slot"],["Min Order","50 folders"],["Delivery","4-6 business days"]],
+related:["letterheads","laminated-cards","envelopes","notepads"]},
+
+"notepads":{name:"Custom Notepads",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_17.jpg","images/stationery/img_9.jpg","images/stationery/img_8.jpg"],rating:"4.5",reviews:"650 reviews",desc:"Tear-off notepads with your branding on every sheet. Great for desks, giveaways and daily notes.",
+options:[{label:"📐 Size",key:"size",choices:["A5","A6","Square 4x4\""]},{label:"📄 Sheets",key:"sheets",choices:["50 Sheets","100 Sheets"]}],
+qty:[{q:25,p:1249},{q:50,p:2249},{q:100,p:3999},{q:250,p:8749}],old:65,unit:"notepads",
+specs:[["Binding","Glue pad (tear-off top)"],["Paper","70 GSM printed sheets"],["Backing","Grey board back"],["Min Order","25 notepads"],["Delivery","3-5 business days"]],
+related:["staple-notebook","wiro-notebook","pens","letterheads"]},
+
+"pens":{name:"Custom Branded Pens",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_18.jpg","images/stationery/img_17.jpg","images/stationery/img_12.jpg"],rating:"4.6",reviews:"3,200 reviews",desc:"Smooth-writing pens with your logo printed or engraved. The most cost-effective branding tool for any business.",
+options:[{label:"🖊️ Type",key:"type",choices:["Plastic Ball Pen","Metal Pen","Gel Pen"]},{label:"🎨 Branding",key:"brand",choices:["Screen Print","Laser Engraving"]}],
+qty:[{q:50,p:749},{q:100,p:1299},{q:250,p:2999},{q:500,p:5499},{q:1000,p:9999}],old:20,unit:"pens",
+specs:[["Types","Plastic / Metal / Gel"],["Ink","Blue or Black, smooth flow"],["Branding","1-colour print or engraving"],["Min Order","50 pens"],["Delivery","4-6 business days"]],
+related:["notepads","hard-cover-notebook","id-cards","tattva-notebooks"]},
+
+/* ---- CARDS & INVITES ---- */
+"wedding-invites":{name:"Wedding Invitations",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_19.jpg","images/stationery/img_20.jpg","images/stationery/img_21.jpg"],rating:"4.9",reviews:"1,150 reviews",desc:"Stunning wedding invitations from classic elegance to modern luxury. Foil, laser-cut and boxed options available.",
+options:[{label:"💎 Style",key:"style",choices:["Classic","Foil Accent","Laser Cut","Boxed Luxury"]},{label:"📄 Inserts",key:"inserts",choices:["1 Insert","2 Inserts","3 Inserts"]}],
+qty:[{q:50,p:3749},{q:100,p:6999},{q:250,p:15999},{q:500,p:29999}],old:95,unit:"invites",
+specs:[["Card","300-600 GSM premium board"],["Styles","Classic / Foil / Laser-cut / Boxed"],["Extras","Matching envelopes included"],["Min Order","50 invitations"],["Delivery","7-10 business days"]],
+related:["premium-invitations","birthday-invites","thankyou-cards","envelopes"]},
+
+"thankyou-cards":{name:"Thank You Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_20.jpg","images/stationery/img_19.jpg","images/stationery/img_22.jpg"],rating:"4.7",reviews:"890 reviews",desc:"Beautiful thank you cards for orders, events and gratitude moments. Perfect for e-commerce packaging inserts too.",
+options:[{label:"📐 Size",key:"size",choices:["A6 (105x148mm)","Square 4x4\"","DL Slim"]},{label:"✨ Finish",key:"finish",choices:["Matte","Glossy","Kraft Natural"]}],
+qty:[{q:100,p:749},{q:250,p:1499},{q:500,p:2499},{q:1000,p:4499}],old:12,unit:"cards",
+specs:[["Card","300 GSM art card"],["Printing","Full colour both sides"],["Min Order","100 cards"],["Delivery","2-4 business days"]],
+related:["post-cards","business-invitations","wedding-invites","envelopes"]},
+
+"post-cards":{name:"Post Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_21.jpg","images/stationery/img_20.jpg","images/stationery/img_19.jpg"],rating:"4.6",reviews:"520 reviews",desc:"Custom postcards for marketing campaigns, travel memories and creative mailers. Standard mailing size.",
+options:[{label:"📐 Size",key:"size",choices:["4x6\" Standard","5x7\" Large"]},{label:"✨ Finish",key:"finish",choices:["Matte","Glossy"]}],
+qty:[{q:100,p:649},{q:250,p:1299},{q:500,p:2249},{q:1000,p:3999}],old:10,unit:"postcards",
+specs:[["Card","300 GSM"],["Printing","Full colour front, writable back"],["Min Order","100 postcards"],["Delivery","2-4 business days"]],
+related:["thankyou-cards","business-invitations","birthday-invites","envelopes"]},
+
+"business-invitations":{name:"Business Invitations",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_22.jpg","images/stationery/img_19.jpg","images/stationery/img_20.jpg"],rating:"4.7",reviews:"340 reviews",desc:"Professional invitations for launches, conferences, annual days and corporate events. Formal and impressive.",
+options:[{label:"📐 Format",key:"format",choices:["Single Card","Folded Card","With Envelope"]},{label:"✨ Finish",key:"finish",choices:["Matte","Spot UV","Foil Accent"]}],
+qty:[{q:50,p:1749},{q:100,p:2999},{q:250,p:6749},{q:500,p:11999}],old:45,unit:"invites",
+specs:[["Card","350 GSM premium board"],["Formats","Flat / Folded / Boxed"],["Min Order","50 invitations"],["Delivery","4-6 business days"]],
+related:["premium-invitations","wedding-invites","thankyou-cards","presentation-folders"]},
+
+"birthday-invites":{name:"Birthday Invitations",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_23.jpg","images/stationery/img_20.jpg","images/stationery/img_21.jpg"],rating:"4.8",reviews:"760 reviews",desc:"Fun, colourful birthday invites for kids and adults. Custom themes, photos and characters welcome!",
+options:[{label:"🎨 Theme",key:"theme",choices:["Kids Cartoon","Elegant Adult","Photo Card","Custom Theme"]},{label:"📐 Size",key:"size",choices:["A6","5x7\"","Square"]}],
+qty:[{q:30,p:749},{q:50,p:1149},{q:100,p:1999},{q:200,p:3599}],old:28,unit:"invites",
+specs:[["Card","300 GSM glossy"],["Printing","Full colour both sides"],["Min Order","30 invitations"],["Delivery","2-4 business days"]],
+related:["wedding-invites","thankyou-cards","post-cards","premium-invitations"]},
+
+"premium-invitations":{name:"Premium Invitations",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_24.jpg","images/stationery/img_19.jpg","images/stationery/img_22.jpg"],rating:"4.9",reviews:"280 reviews",desc:"Ultra-luxury invitations with foil, embossing, silk ribbons and rigid boxes. For events that demand the extraordinary.",
+options:[{label:"💎 Luxury Level",key:"level",choices:["Foil + Emboss","Acrylic Card","Boxed Set"]},{label:"🎀 Extras",key:"extras",choices:["Silk Ribbon","Wax Seal","Both"]}],
+qty:[{q:50,p:9999},{q:100,p:18999},{q:250,p:44999}],old:260,unit:"invites",
+specs:[["Materials","600+ GSM / Acrylic / Rigid box"],["Techniques","Hot foil, embossing, wax seal"],["Min Order","50 invitations"],["Delivery","10-14 business days"]],
+related:["wedding-invites","raised-foil-cards","business-invitations","thankyou-cards"]},
+
+/* ---- ID & LANYARDS ---- */
+"id-cards":{name:"ID Cards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_25.jpg","images/stationery/img_26.jpg","images/stationery/img_14.jpg"],rating:"4.7",reviews:"2,450 reviews",desc:"Durable PVC ID cards for employees, students and members. With photo, QR code and barcode options.",
+options:[{label:"💳 Type",key:"type",choices:["PVC Standard","PVC Premium Thick","With Chip Slot"]},{label:"🖨️ Printing",key:"side",choices:["Single Side","Both Sides"]}],
+qty:[{q:10,p:499},{q:25,p:999},{q:50,p:1749},{q:100,p:2999},{q:250,p:6499}],old:65,unit:"cards",
+specs:[["Material","PVC 760 micron"],["Size","CR80 (85.6 x 54 mm)"],["Features","Photo, QR, barcode printing"],["Min Order","10 cards"],["Delivery","2-3 business days"]],
+related:["lanyards","rubber-stamps","laminated-cards","pens"]},
+
+"lanyards":{name:"Custom Lanyards",cat:"Stationery",catHref:"05-stationery.html",imgs:["images/stationery/img_26.jpg","images/stationery/img_25.jpg","images/stationery/img_18.jpg"],rating:"4.6",reviews:"1,320 reviews",desc:"Printed lanyards with hooks and safety clips. Pair with ID cards for offices, events and conferences.",
+options:[{label:"🎗️ Width",key:"width",choices:["12mm Slim","16mm Standard","20mm Wide"]},{label:"🔗 Hook",key:"hook",choices:["Metal Hook","Plastic Clip","Both + Safety"]}],
+qty:[{q:25,p:1249},{q:50,p:2249},{q:100,p:3999},{q:250,p:8749},{q:500,p:15999}],old:65,unit:"lanyards",
+specs:[["Material","Polyester satin"],["Printing","Full colour sublimation both sides"],["Attachments","Metal hook / clip / safety breakaway"],["Min Order","25 lanyards"],["Delivery","4-6 business days"]],
+related:["id-cards","pens","notepads","rubber-stamps"]}
+
+};
+
+/* ═══ WhatsApp Number ═══ */
+const WA_PHONE = '919560597115';
+
+/* ═══ Load Product from URL ═══ */
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('p');
+const P = PRODUCTS[slug];
+
+let selOptions = {};
+let selQty = 0, selPrice = 0;
+
+if (!P) {
+  document.querySelector('.product').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px"><h1 style="font-family:Outfit;font-size:28px;margin-bottom:12px">Product not found</h1><p style="color:#6b6b6b;margin-bottom:20px">Ye product abhi available nahi hai.</p><a href="01-all-products.html" style="display:inline-block;background:#e63329;color:#fff;padding:12px 28px;border-radius:999px;font-weight:700">Browse All Products →</a></div>';
+  document.querySelector('.specs').style.display='none';
+  document.querySelector('.related').style.display='none';
+} else {
+  // Title & meta
+  document.title = P.name + ' | Custom Printing | LagunyaPrint';
+  
+  // Breadcrumb
+  document.getElementById('breadcrumb').innerHTML = '<a href="index.html">Home</a> &rsaquo; <a href="'+P.catHref+'">'+P.cat+'</a> &rsaquo; <b>'+P.name+'</b>';
+  
+  // Gallery
+  const mainImg = document.getElementById('mainImg');
+  mainImg.src = P.imgs[0];
+  mainImg.alt = P.name;
+  mainImg.onerror = function(){ this.onerror=null; this.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="#fff1f0" width="400" height="300"/><text x="200" y="150" font-family="Arial" font-size="20" fill="#e63329" text-anchor="middle">'+P.name+'</text></svg>'); };
+  
+  document.getElementById('thumbs').innerHTML = P.imgs.map((src,i)=>
+    '<div class="thumb'+(i===0?' active':'')+'" onclick="changeImg(this,\''+src+'\')"><img src="'+src+'" alt="View '+(i+1)+'" onerror="this.style.display=\'none\'"></div>'
+  ).join('');
+  
+  // Info
+  document.getElementById('pCat').textContent = P.cat;
+  document.getElementById('pName').textContent = P.name;
+  document.getElementById('pReviews').textContent = P.rating + ' (' + P.reviews + ')';
+  document.getElementById('pDesc').textContent = P.desc;
+  document.getElementById('unitLabel').textContent = P.unit;
+  
+  // Price
+  const startP = P.qty[0].p;
+  document.getElementById('startPrice').textContent = startP.toLocaleString('en-IN');
+  if (P.old) {
+    const perUnit = Math.round(startP / P.qty[0].q);
+    const oldTotal = P.old * P.qty[0].q > startP ? P.old : Math.round(startP * 1.4 / P.qty[0].q);
+    document.getElementById('oldPrice').textContent = '₹' + Math.round(startP*1.5).toLocaleString('en-IN');
+    document.getElementById('saveTag').textContent = '33% OFF';
+  }
+  
+  // Options
+  document.getElementById('optionsArea').innerHTML = P.options.map((opt,oi)=>
+    '<div class="opt-group"><div class="opt-label">'+opt.label+'</div><div class="opt-buttons">'+
+    opt.choices.map((c,ci)=>'<div class="opt-btn'+(ci===0?' active':'')+'" onclick="selectOpt(this,\''+opt.key+'\',\''+c.replace(/'/g,"\\'")+'\')">'+c+'</div>').join('')+
+    '</div></div>'
+  ).join('');
+  P.options.forEach(opt=>{ selOptions[opt.key] = opt.choices[0]; });
+  
+  // Quantity
+  document.getElementById('qtyBtns').innerHTML = P.qty.map((t,i)=>
+    '<div class="qty-btn'+(i===0?' active':'')+'" onclick="selectQty(this,'+t.q+','+t.p+')"><span class="q">'+t.q+'</span><span class="p">₹'+t.p.toLocaleString('en-IN')+'</span></div>'
+  ).join('');
+  selQty = P.qty[0].q; selPrice = P.qty[0].p;
+  document.getElementById('totalQty').textContent = selQty;
+  document.getElementById('totalPrice').textContent = selPrice.toLocaleString('en-IN');
+  
+  // Specs
+  document.getElementById('specsTable').innerHTML = P.specs.map(row=>
+    '<tr><td>'+row[0]+'</td><td>'+row[1]+'</td></tr>'
+  ).join('');
+  
+  // Related
+  if (P.related) {
+    document.getElementById('relGrid').innerHTML = P.related.filter(r=>PRODUCTS[r]).map(r=>{
+      const rp = PRODUCTS[r];
+      return '<a class="rel-card" href="product.html?p='+r+'"><img src="'+rp.imgs[0]+'" alt="'+rp.name+'" onerror="this.style.background=\'#fff1f0\'"><div class="rc-body"><h3>'+rp.name+'</h3><p>₹'+rp.qty[0].p.toLocaleString('en-IN')+' onwards</p></div></a>';
+    }).join('');
+  }
+}
+
+function selectOpt(btn, key, value) {
+  btn.parentElement.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selOptions[key] = value;
+}
+
+function selectQty(btn, q, p) {
+  document.querySelectorAll('#qtyBtns .qty-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selQty = q; selPrice = p;
+  document.getElementById('totalQty').textContent = q;
+  document.getElementById('totalPrice').textContent = p.toLocaleString('en-IN');
+}
+
+function changeImg(thumb, src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function orderWhatsApp() {
+  if (!P) { window.open('https://wa.me/'+WA_PHONE, '_blank'); return; }
+  let optLines = Object.entries(selOptions).map(([k,v])=>'▪️ '+v).join('\n');
+  const message = 'Hi LagunyaPrint! 👋\n\nI want to order *'+P.name+'*:\n\n'+optLines+'\n📦 Quantity: '+selQty+' '+P.unit+'\n💰 Price: ₹'+selPrice.toLocaleString('en-IN')+'\n\nPlease help me customize and confirm my order.';
+  window.open('https://wa.me/'+WA_PHONE+'?text='+encodeURIComponent(message), '_blank');
+}
+
+/* ═══ MEGA MENU ═══ */
+const MENU = {
+"All Products":{href:"01-all-products.html",columns:[{title:"Best Sellers",items:[{name:"Business Cards",href:"product-business-cards.html",tag:"best"},{name:"T-shirts",href:"03-apparel.html"},{name:"Photo Prints",href:"04-photo-gifts.html"},{name:"Letterheads",href:"product.html?p=letterheads"},{name:"ID Cards",href:"product.html?p=id-cards"},{name:"Drinkware",href:"09-drinkware.html"},{name:"Stickers",href:"06-packaging.html"}]},{title:"Browse Categories",items:[{name:"Business Stationery",href:"05-stationery.html"},{name:"Photo Gifts",href:"04-photo-gifts.html"},{name:"Apparel",href:"03-apparel.html"},{name:"Packaging",href:"06-packaging.html"},{name:"Signage",href:"07-signage.html"},{name:"Corporate Gifts",href:"08-corporate-gifts.html"},{name:"Drinkware",href:"09-drinkware.html"}]},{title:"Shop By Needs",items:[{name:"Cafe & Restaurant",href:"10-hotels-restaurants.html"},{name:"Employee Gifting",href:"08-corporate-gifts.html"}]},{title:"Stores & Services",items:[{name:"Same Day Delivery",href:"02-same-day-delivery.html",tag:"fast"},{name:"New Launches",href:"#",tag:"new"}]}]},
+"Same Day Delivery":{href:"02-same-day-delivery.html",columns:[{title:"Shop By Category",items:[{name:"Photo Gifts",href:"04-photo-gifts.html"},{name:"T-shirts & Hoodies",href:"03-apparel.html"},{name:"Business Stationery",href:"05-stationery.html"},{name:"Packaging",href:"06-packaging.html"}]},{title:"Best Sellers",items:[{name:"Photo Prints",href:"04-photo-gifts.html",tag:"best"},{name:"Business Cards",href:"product-business-cards.html"},{name:"ID Cards",href:"product.html?p=id-cards"},{name:"Rubber Stamps",href:"product.html?p=rubber-stamps"}]},{title:"Photo Gifts",items:[{name:"Classic Photo Frames",href:"04-photo-gifts.html"},{name:"Personalized Mugs",href:"09-drinkware.html"}]},{title:"Drinkware",items:[{name:"Freo Sipper",href:"09-drinkware.html"},{name:"Cola Can",href:"09-drinkware.html"}]}]},
+"Apparel":{href:"03-apparel.html",columns:[{title:"T-shirts",items:[{name:"Custom Round Neck",href:"03-apparel.html"},{name:"Ultra Premium Round Neck",href:"03-apparel.html",tag:"new"},{name:"Dry-Fit T-shirts",href:"03-apparel.html"},{name:"Custom Polo T-shirts",href:"03-apparel.html"}]},{title:"Hoodies & Jackets",items:[{name:"Hoodies & Sweatshirts",href:"03-apparel.html"},{name:"Ultra Premium Hoodies",href:"03-apparel.html"},{name:"High Neck Jackets",href:"03-apparel.html"}]},{title:"Branded T-shirts",items:[{name:"Finch Round Neck",href:"03-apparel.html",tag:"new"},{name:"Levis Round Neck",href:"03-apparel.html",tag:"new"}]},{title:"Caps & Bags",items:[{name:"Custom Caps",href:"03-apparel.html"},{name:"Backpacks",href:"08-corporate-gifts.html"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"}]}]},
+"Photo Gifts":{href:"04-photo-gifts.html",columns:[{title:"Most Popular",items:[{name:"Photo Frames",href:"04-photo-gifts.html",tag:"pop"},{name:"Acrylic Prints",href:"04-photo-gifts.html",tag:"prem"},{name:"Mugs",href:"09-drinkware.html"},{name:"Photo Albums",href:"04-photo-gifts.html"}]},{title:"Prints & Decor",items:[{name:"Photo Prints",href:"04-photo-gifts.html"},{name:"Posters",href:"07-signage.html"},{name:"Fridge Magnets",href:"04-photo-gifts.html"}]},{title:"Photo Frames",items:[{name:"Collage Frames",href:"04-photo-gifts.html",tag:"new"},{name:"Classic Frames",href:"04-photo-gifts.html"}]},{title:"Accessories",items:[{name:"Keychains",href:"04-photo-gifts.html"},{name:"Playing Cards",href:"04-photo-gifts.html"}]}]},
+"Stationery":{href:"05-stationery.html",columns:[{title:"Business Cards",items:[{name:"Standard Business Cards",href:"product-business-cards.html",tag:"rec"},{name:"Non Tearable Cards",href:"product.html?p=non-tearable-cards"},{name:"Laminated Cards",href:"product.html?p=laminated-cards"},{name:"Raised Foil Cards",href:"product.html?p=raised-foil-cards",tag:"prem"}]},{title:"Notebooks",items:[{name:"Tattva Notebooks",href:"product.html?p=tattva-notebooks",tag:"new"},{name:"Wiro Notebook",href:"product.html?p=wiro-notebook"},{name:"Staple Notebook",href:"product.html?p=staple-notebook"},{name:"Perfect Bind Notebook",href:"product.html?p=perfect-bind-notebook"},{name:"Hard Cover Notebook",href:"product.html?p=hard-cover-notebook"},{name:"Premium Notebooks",href:"product.html?p=premium-notebooks"}]},{title:"Office Supplies",items:[{name:"Letterheads",href:"product.html?p=letterheads"},{name:"Envelopes",href:"product.html?p=envelopes"},{name:"Rubber Stamps",href:"product.html?p=rubber-stamps"},{name:"Bill Books",href:"product.html?p=bill-books"},{name:"Presentation Folders",href:"product.html?p=presentation-folders"},{name:"Notepads",href:"product.html?p=notepads"},{name:"Pens",href:"product.html?p=pens"}]},{title:"Cards & Invites",items:[{name:"Wedding Invites",href:"product.html?p=wedding-invites"},{name:"Thankyou Cards",href:"product.html?p=thankyou-cards"},{name:"Post Cards",href:"product.html?p=post-cards"},{name:"Business Invitations",href:"product.html?p=business-invitations"},{name:"Birthday Invites",href:"product.html?p=birthday-invites"},{name:"Premium Invitations",href:"product.html?p=premium-invitations"},{name:"ID Cards",href:"product.html?p=id-cards"},{name:"Lanyards",href:"product.html?p=lanyards"}]}]},
+"Packaging":{href:"06-packaging.html",columns:[{title:"Stickers",items:[{name:"Custom Shape Stickers",href:"06-packaging.html",tag:"rec"},{name:"Gold Foil Stickers",href:"06-packaging.html"},{name:"Circle Stickers",href:"06-packaging.html"}]},{title:"Labels",items:[{name:"Packaging Labels",href:"06-packaging.html",tag:"pop"},{name:"Transparent Labels",href:"06-packaging.html"},{name:"Kraft Labels",href:"06-packaging.html"}]},{title:"Boxes & Bags",items:[{name:"Mailer Boxes",href:"06-packaging.html",tag:"rec"},{name:"Food Boxes",href:"06-packaging.html"},{name:"Paper Bags",href:"06-packaging.html"}]},{title:"Hospitality",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html"},{name:"Tote Bags",href:"06-packaging.html",tag:"new"},{name:"Coasters",href:"10-hotels-restaurants.html"}]}]},
+"Signage":{href:"07-signage.html",columns:[{title:"Outdoor",items:[{name:"Banners",href:"07-signage.html"},{name:"Standees",href:"07-signage.html"},{name:"Vehicle Graphics",href:"07-signage.html"}]},{title:"Indoor",items:[{name:"Name Plates",href:"07-signage.html"},{name:"Acrylic Desk Stand",href:"07-signage.html",tag:"pop"},{name:"QR Code Stand",href:"07-signage.html",tag:"new"}]},{title:"Event",items:[{name:"Event Standees",href:"07-signage.html"},{name:"Flyers",href:"07-signage.html"},{name:"Brochures",href:"07-signage.html"}]},{title:"Custom",items:[{name:"LED Frames",href:"04-photo-gifts.html"},{name:"Canvas",href:"04-photo-gifts.html"}]}]},
+"Corporate Gifts":{href:"08-corporate-gifts.html",columns:[{title:"Joining Kits",items:[{name:"The Chapter One",href:"08-corporate-gifts.html",tag:"new"},{name:"Premium Welcome Kit",href:"08-corporate-gifts.html"}]},{title:"Festive Hampers",items:[{name:"Diwali Hamper",href:"08-corporate-gifts.html"},{name:"New Year Hamper",href:"08-corporate-gifts.html"}]},{title:"Awards",items:[{name:"Crystal Trophies",href:"08-corporate-gifts.html",tag:"pop"},{name:"Certificates",href:"08-corporate-gifts.html"}]},{title:"Drinkware",items:[{name:"Premium Bottles",href:"09-drinkware.html",tag:"new"},{name:"Mugs",href:"09-drinkware.html"}]}]},
+"Drinkware":{href:"09-drinkware.html",columns:[{title:"New Launches",items:[{name:"Frosty Sipper",href:"09-drinkware.html",tag:"new"},{name:"Radiate Tumbler",href:"09-drinkware.html",tag:"new"}]},{title:"Best Sellers",items:[{name:"Freo Insulated Bottle",href:"09-drinkware.html",tag:"best"},{name:"Cola Can",href:"09-drinkware.html"}]},{title:"Premium Mugs",items:[{name:"Jumbo Mug White",href:"09-drinkware.html"},{name:"Photo Magic Mug",href:"09-drinkware.html"}]},{title:"Bottles",items:[{name:"PureGrip Bottle",href:"09-drinkware.html"},{name:"Mason Jar",href:"09-drinkware.html"}]}]},
+"Hotels & Restaurants":{href:"10-hotels-restaurants.html",columns:[{title:"Cafe Essentials",items:[{name:"Menu Cards",href:"10-hotels-restaurants.html",tag:"pop"},{name:"Coasters",href:"10-hotels-restaurants.html"},{name:"QR Stand",href:"10-hotels-restaurants.html",tag:"new"}]},{title:"Takeaway",items:[{name:"Food Boxes",href:"10-hotels-restaurants.html"},{name:"Paper Bags",href:"10-hotels-restaurants.html"}]},{title:"Decor & Staff",items:[{name:"Posters",href:"10-hotels-restaurants.html"},{name:"Polo T-shirts",href:"10-hotels-restaurants.html"}]},{title:"Branding",items:[{name:"Flyers",href:"10-hotels-restaurants.html"},{name:"Stickers",href:"10-hotels-restaurants.html"}]}]}
+};
+
+function getTagLabel(tag){const l={'new':'NEW','best':'Best Seller','pop':'Popular','fast':'Fast','rec':'Recommended','prem':'Premium'};return l[tag]||tag.toUpperCase()}
+function buildMenuItem(name,data){const cols=data.columns.map(col=>`<div class="mm-col"><h3>${col.title}</h3><ul>${col.items.map(item=>`<li><a href="${item.href}"><span>${item.name}</span>${item.tag?`<span class="mm-tag ${item.tag}">${getTagLabel(item.tag)}</span>`:''}</a></li>`).join('')}</ul></div>`).join('');return `<li class="mm-item"><a class="mm-link" href="${data.href}">${name}<span class="arrow">▼</span></a><div class="mm-dropdown"><div class="mm-grid">${cols}</div><div class="mm-footer-bar"><span style="font-size:13px;color:#6b6b6b">Explore all ${name}</span><a href="${data.href}" class="mm-view-all">View All →</a></div></div></li>`}
+function renderMenu(){const list=document.getElementById('mmList');const items=Object.entries(MENU).map(([name,data])=>buildMenuItem(name,data)).join('');list.innerHTML=`<button class="mm-item-close" id="mobClose">✕</button>${items}`;attachMM()}
+function attachMM(){const items=document.querySelectorAll('.mm-item');const isMob=()=>window.innerWidth<=1024;items.forEach(item=>{const link=item.querySelector('.mm-link');if(!link)return;link.addEventListener('click',(e)=>{if(isMob()){e.preventDefault();const wasOpen=item.classList.contains('open');items.forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}})});const mobToggle=document.getElementById('mobToggle');const mmList=document.getElementById('mmList');const mobClose=document.getElementById('mobClose');if(mobToggle)mobToggle.addEventListener('click',()=>{mmList.classList.add('show');document.body.classList.add('mm-open')});if(mobClose)mobClose.addEventListener('click',()=>{mmList.classList.remove('show');document.body.classList.remove('mm-open');items.forEach(i=>i.classList.remove('open'))});document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){mmList?.classList.remove('show');document.body.classList.remove('mm-open')}});document.querySelectorAll('.mm-col a, .mm-view-all').forEach(link=>{link.addEventListener('click',()=>{if(isMob()){mmList.classList.remove('show');document.body.classList.remove('mm-open')}})})}
+renderMenu();
+window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('sc',scrollY>10)});
+</script>
+</body>
+</html>
