@@ -226,6 +226,25 @@ a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:bloc
 @media(max-width:900px){.ft{padding-bottom:88px}
  .ft .logo span{font-size:19px !important;display:inline !important}
  .ft .logo img{width:46px;height:46px}}
+
+.ql-card .ql-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.ql-card .qi{position:relative;z-index:2;justify-content:flex-end;padding:12px 10px}
+.ql-card .qi::before{content:'';position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.72) 100%)}
+.ql-card .qi .em{display:none}
+.ql-card .qi .lb{color:#fff;font-size:12px;line-height:1.35;text-shadow:0 1px 5px rgba(0,0,0,.75)}
+.ql-card{border-color:transparent}
+.ql-card:hover .ql-bg{transform:scale(1.06);transition:transform .5s}
+.ql-card:hover{border-color:var(--brand-magenta)}
+
+.mm-list{flex-wrap:wrap}
+@media(min-width:901px){
+ .mm-link{padding:14px 10px;font-size:13px}
+ .mm-link .arrow{font-size:9px}
+}
+@media(min-width:901px) and (max-width:1150px){
+ .mm-link{padding:13px 7px;font-size:12.5px;gap:4px}
+}
 </style>
 <link rel="canonical" href="https://lagunyaprint.in/10-hotels-restaurants.html">
 <meta property="og:type" content="website">
@@ -264,12 +283,12 @@ a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:bloc
 
 <!-- ═══ QUICK LINKS — Section Navigation ═══ -->
 <div class="quick-links">
-<a class="ql-card" href="#essentials"><div class="qi"><div class="em">🍽️</div><div class="lb">Cafe & Restaurant Essentials</div></div></a>
-<a class="ql-card" href="#takeaway"><div class="qi"><div class="em">🥡</div><div class="lb">Takeaway & Delivery</div></div></a>
-<a class="ql-card" href="#decor"><div class="qi"><div class="em">🎨</div><div class="lb">Decor & Displays</div></div></a>
-<a class="ql-card" href="#staff"><div class="qi"><div class="em">👨‍🍳</div><div class="lb">Staff Essentials</div></div></a>
-<a class="ql-card" href="#safety"><div class="qi"><div class="em">⚠️</div><div class="lb">Safety Signages</div></div></a>
-<a class="ql-card" href="#branding"><div class="qi"><div class="em">📢</div><div class="lb">Branding Essentials</div></div></a>
+<a class="ql-card" href="#essentials"><img class="ql-bg" src="images/ql/hotels-restaurants/essentials.jpg" alt="Cafe & Restaurant Essentials" width="440" height="440" loading="lazy"><div class="qi"><div class="em">🍽️</div><div class="lb">Cafe & Restaurant Essentials</div></div></a>
+<a class="ql-card" href="#takeaway"><img class="ql-bg" src="images/ql/hotels-restaurants/takeaway.jpg" alt="Takeaway & Delivery" width="440" height="440" loading="lazy"><div class="qi"><div class="em">🥡</div><div class="lb">Takeaway & Delivery</div></div></a>
+<a class="ql-card" href="#decor"><img class="ql-bg" src="images/ql/hotels-restaurants/decor.jpg" alt="Decor & Displays" width="440" height="440" loading="lazy"><div class="qi"><div class="em">🎨</div><div class="lb">Decor & Displays</div></div></a>
+<a class="ql-card" href="#staff"><img class="ql-bg" src="images/ql/hotels-restaurants/staff.jpg" alt="Staff Essentials" width="440" height="440" loading="lazy"><div class="qi"><div class="em">👨‍🍳</div><div class="lb">Staff Essentials</div></div></a>
+<a class="ql-card" href="#safety"><img class="ql-bg" src="images/ql/hotels-restaurants/safety.jpg" alt="Safety Signages" width="440" height="440" loading="lazy"><div class="qi"><div class="em">⚠️</div><div class="lb">Safety Signages</div></div></a>
+<a class="ql-card" href="#branding"><img class="ql-bg" src="images/ql/hotels-restaurants/branding.jpg" alt="Branding Essentials" width="440" height="440" loading="lazy"><div class="qi"><div class="em">📢</div><div class="lb">Branding Essentials</div></div></a>
 </div>
 
 <div class="tabs" id="tabs"></div>
